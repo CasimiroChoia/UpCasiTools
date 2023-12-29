@@ -1,0 +1,88 @@
+* {
+    text-align: center;
+    font-family: monospace;
+    font-size: 100%;
+    text-transform: capitalize;
+}
+
+body {
+    background: rgb(131, 164, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container_Da_Hora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    background: #ffffff;
+    width: 40vw;
+    min-height:390px;
+    height: 50%;
+    text-align: center;
+    padding: 0 5%;
+    margin: 15px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+    overflow: hidden;
+}
+
+.HoraDoDia {
+    color: black;
+    font-size:4em;
+    background: linear-gradient(to right, #b72bd3, #3683ff);
+    background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.smsHora {
+    /* font-size: 1.7em; */
+    min-width: 20ch;
+}
+
+@media (max-width:320px) {
+    .smsHora{
+        font-size: 1em;
+/*              background: linear-gradient(to right, #ff00cc, #3333ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;*/
+    }
+    img {
+        width: 100%;
+        border: none;
+        z-index: 5;
+    }
+    .container_Da_Hora {
+        width: 80vw;
+    }
+}
+
+img {
+    width: 200px;
+    margin:5px auto;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+@media (max-width:485px) {
+    img {
+        display: block;
+        width: 90%;
+        margin: 5px auto;
+    }
+}
+
+@keyframes rotate{
+    0% {
+        transform:rotateZ(0deg);
+    }
+    
+    100% {
+        transform:rotateZ(360deg);
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpCasiTools || Calc Notas Sem Array()</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+                .back-to-main {
+            font-weight: bolder;
+            font-family: monospace;
+            font-size: 20px;
+            transition: .5s;
+            border-radius: 10px;
+            border: none;
+            background-color: transparent;
+            box-shadow: 0 0 5px #000;
+
+            margin: 10px 5px 0;
+            padding: 5px 15px;
+        }
+
+        .back-to-main:hover {
+            letter-spacing: 2px;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        // CODIGO EM JAVASCRIPT
+            var totalSize = 0
+            var input = document.getElementById("numero")
+            var option = null
+            var maxNum = 0
+            var minNum = 20
+            var soma = 0
+            var mediaTotal = 0
+            var maxAlunoNota;
+            var minAlunoNota;
+
+            function addNum() {
+                numero = Number(document.querySelector("input[type=number]").value)
+                if (numero < 0 || numero > 20) {
+                    // SE A NOTA FOR INVÁLIDA
+                    alert("Nota Inválida")   
+                } else if(document.querySelector("input[type=number]").value.length==0) {
+                    // SE O INPUT ESTIVER VAZIO
+                    alert("Digite algum valor")
+                } else {
+                    // LÓGICA DO PROGRAMA E ADICIONAR OPTION
+                    
+                    option = document.createElement("option");
+                    document.querySelector("select").appendChild(option)
+                    option.innerText = `o Nº${totalSize+1} teve ${numero} valores`
+                    
+                    ++totalSize
+                    document.querySelector("select#caixa-numerica").setAttribute("size",totalSize)
+                    if (numero>maxNum) {
+                        maxNum=numero; 
+                        maxAlunoNota = totalSize;
+                    }
+                    if (numero<minNum) { 
+                        minNum=numero; 
+                        minAlunoNota = totalSize;
+                    }
+                    
+                    soma += numero
+                    mediaTotal += numero
+                } 
+                document.querySelector("input[type=number]").value = null
+            }
+
+            function Min() {
+                document.querySelector("p.resu").innerText = `infelizmente quem teve a minima Nota foi o Aluno Nº${minAlunoNota} com ${minNum} valores`
+            }
+            
+            function Max() {
+                document.querySelector("p.resu").innerText = `Muitos parabéns ao Aluno Nº${maxAlunoNota} com ${maxNum} valores`
+            }
+            
+            function MediaTotal() {
+                document.querySelector("p.resu").innerText = `A Média total da turma foi de ${mediaTotal/totalSize} valores`
+            }
+            
+            function Soma() {
+                document.querySelector("p.resu").innerText = `a soma das Nota é igual à ${soma}`
+            }
+
+        
+        // HTML COM JAVASCRIPT
+        document.writeln("<header><h1>Calc Notas Sem Array()</h1></header>")
+        document.writeln("<main>")
+        document.writeln("<p class=p-inline ><label for=numero>adiciona uma Nota: </label><input type=number id=numero max=20 min=0 placeholder=adicione aqui maxlength=2 size=2> <button type=button onclick=addNum() >adicionar</button> </p>")
+        document.writeln("<select id=caixa-numerica> ")
+        document.writeln("</select>")
+            // document.querySelector("select#caixa-numerica").setAttribute("size",totalSize)
+        document.writeln("<p class=p-block >  <button type=button onclick=Min()>min</button> <button type=button onclick=MediaTotal()>media total</button> <button type=button onclick=Soma()>soma</button> <button type=button onclick=Max()>max</button> </p>")
+        document.writeln("<p class=resu >Aqui vai aparecer a sua ordem</p>")
+        document.writeln("<a style='text-decoration:none;' href='../index.html'><button class='back-to-main'>voltar</button></a>")
+        document.writeln("</main>")
+        document.writeln("<footer>")
+        document.writeln("<p>obrigado pelo uso desta ferramenta da UpCasiTools.🤜🏼🤛🏼</p>")
+        document.writeln("</footer>")
+        
+    </script>
+    
+</body>
+</html>

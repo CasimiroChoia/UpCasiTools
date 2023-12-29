@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpCasiTools || Calc Notas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="think.ico" type="image/x-icon">
+    <script defer src="js/script.js"></script>
+</head>
+<body onload="validacao()">
+    <header>
+        <h1>Calc Média</h1>
+    </header>
+    <main>
+        <p class="p-inline">
+            <label for="numero">adiciona uma Nota: </label>
+            <input type="number" id="numero" max="20" min="0" placeholder="adicione&nbsp;aqui" maxlength="2" size="2" autofocus>
+            <button type="button" >adicionar</button> 
+        </p>
+
+        <select id="caixa-numerica" aria-readonly="true"> 
+        </select>
+
+
+        <p class="p-block">
+            <button name="min" type="button"> gerar resultado </button>
+            <button name="min" type="button"> ordenar a lista </button>
+        </p>
+        <hr>
+        <p class="resu">Aqui vai aparecer a sua ordem</p>
+        <hr>
+        <a href="../index.html" style="text-decoration: none;"><button class="back-to-main">voltar</button></a>
+    </main>
+    <footer>
+        <p>obrigado pelo uso desta ferramenta da UpCasiTools.🤜🏼🤛🏼</p>
+    </footer>
+</body>
+</html>

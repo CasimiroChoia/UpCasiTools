@@ -1,0 +1,106 @@
+    * {
+        padding: 0;
+        margin: 0;
+        text-transform: capitalize;
+        font-family: monospace;
+        font-size: larger;
+        text-align: center;
+        /* border: 5px solid #000;   */
+    }
+
+    *::first-letter{
+        font-size: 2em;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* height: 100vh; */
+        background-color: rgb(60, 59, 50);
+        overflow-y: auto;
+    }
+    
+    header h1 {
+        font-size: 2em;
+        /* -webkit-background-clip: text; */
+        background: linear-gradient(to right, #b72bd3, #3683ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main {
+        margin: 20px 0;
+        background-color: aliceblue;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 10px black;
+        padding: 20px;
+        min-width: 250px;
+        width: 80%;
+        max-width: 500px;
+        height: 400px;
+        max-height: 420px;
+        overflow-y: auto;
+    }
+
+    button {
+        display: block;
+        margin: auto;
+        padding: 5px;
+        text-decoration: none;
+        border-radius:10px;
+        border: 3px solid rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 #000;
+        transition: 1s;
+        background-color: transparent;
+    }
+
+    button:disabled {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+
+    button:hover {
+        transform: translateY(-15px) translateX(-10px);
+        margin: 5px auto;
+        background: rgba(44, 34, 34, 0.227);
+        transition: 1s;
+        box-shadow: 0 0 10px #000;
+    }
+    /* OTHER CONFIGURATIONS */
+
+    p:not(.cont) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    p:not(.cont):hover {
+        padding: 0;
+        border-bottom: 5px solid #000;
+    }
+
+    p input {
+        width: 120px;
+        border-radius: 20px;
+        border: 3px solid rgba(0, 0, 0, 0.205);
+    }
+
+    .before-input {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    @media (max-media:850px) {
+        .before-input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            /* display: none; */
+            /* width: 10px; */
+        }
+    }

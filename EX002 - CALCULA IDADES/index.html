@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="age-range.ico" type="image/x-icon">
+    <title>UpCasiTools || Verificar idade</title>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>verificador de Idade</h1>
+    </header>
+    <main  class="container">
+        <section>
+            <div class="idade">
+                <span>Digite o seu ano de nascimento:</span>
+                <input type="number" min="1900" value="2023" name="txtAnoNasc" id="AnoNasc">
+            </div>
+            <hr>
+            <div class="sexo">
+                <span>sexo:</span>
+                <span>
+                    <input type="radio" name="sexo" id="masc" checked>
+                    <label for="masc">masculino</label>
+                    <label for="masc" class="radiom"></label>
+                </span>
+                <span>
+                    <input type="radio" name="sexo" id="femi">
+                    <label for="femi">feminino</label>
+                    <label for="femi" class="radiof"></label>
+                </span>
+            </div>
+            <button type="button" onclick="verif()">verificar</button>
+            <div class="sms-idades">
+                <p></p>
+                <img src="" style="border-radius: 50%;" width="60%" class="img-idades">
+            </div>
+        </section>
+        <a href="../index.html"><button>voltar</button></a>
+    </main>
+    <footer>
+        <p>obrigado pelo uso desta ferramenta da UpCasiTools.🤜🏼🤛🏼</p>
+    </footer>
+</body>
+</html>

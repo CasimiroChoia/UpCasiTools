@@ -1,0 +1,106 @@
+    @font-face {
+        font-family: "droid";
+        src: url("fontes/IDroid.otf") format("TrueType");
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+        text-transform: capitalize;
+        font-family: monospace;
+        font-size: larger;
+        text-align: center;
+        overflow: hidden;
+        /* border: 5px solid #000;   */
+    }
+
+    *::first-letter{
+        font-size: 2em;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(60, 59, 50);
+    }
+
+    header,
+    main,
+    footer {
+        margin: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        /* -webkit-background-clip: text; */
+        background: linear-gradient(to right, #b72bd3, #3683ff);
+        background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+    main {
+        background-color: aliceblue;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 10px black;
+        padding: 20px 40px;
+        min-width: fit-content;
+        /* max-width: 600px; */
+        max-height: 60%;
+        overflow-y: scroll;
+    }
+
+    button {
+        display: inline;
+        /* margin: auto; */
+        padding: 0 5px;
+        text-decoration: none;
+        border-radius:10px;
+        border: 3px solid rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 #000;
+        background-color: transparent;
+    }
+
+    /* OTHER CONFIGURATIONS */
+
+    p input {
+        min-width: 200px;
+        border-radius: 20px;
+        border: 3px solid rgba(0, 0, 0, 0.205);
+        /* font-family: "droid"; */
+    }
+
+    .p-inline {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        place-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+
+    .p-inline > * {
+        margin: 3px;
+    }
+    
+    main select {
+        width: 80%;
+        font-size: medium;
+        /* height: 50%; */
+    }
+    
+    .p-block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        place-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+        
+    .p-block > * {
+        margin: 5px 3px;
+    }

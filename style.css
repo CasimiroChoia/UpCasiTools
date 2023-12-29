@@ -1,0 +1,182 @@
+
+            @keyframes img-mex {
+                0%,20%,40%,60%,80% {
+                    transform: rotate(-25deg);
+                }
+
+                10%,30%,50%,70%,90% {
+                    transform: rotate(25deg);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
+
+            @keyframes img-rotate {
+
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+
+            }
+
+            :root {
+
+                --timing: 1s;
+                --timing-1: .9s;
+                --timing-5: .5s;
+
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                text-transform: capitalize;
+                text-align: center;
+                font-family: monospace;
+                /* border: 1px solid #000; */
+                overflow-x: hidden;
+                overflow-x: visible;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                place-items: center;
+                place-content: center;
+                background: rgb(146, 167, 255);
+
+                color: #000;
+                
+                /* height: 100vh; */
+                width: 100vw;
+                padding: 5px 5px 0;
+
+                overflow: visible;
+            }
+
+            body > * {
+                margin: 10px auto;
+                padding: 20px 0;
+            }
+
+            header,
+            footer {
+                display: block;
+                width: 90%;
+                text-align: center;
+                font-size: 2em;
+            }
+            
+            @media (max-width:450px) {
+                
+            header h1 {
+                font-size: 1.5em;
+                margin-bottom: 2em;
+            }
+
+            }
+
+            main {
+                display: block;
+                max-width: 550px;
+                min-width: 200px;
+                height: fit-content;
+                background: #fff;
+            
+                box-shadow: 7px 7px 10px 5px #000;
+                border-radius: 20px;
+                overflow-y: visible;
+
+                font-size: 1.5em;
+            }
+
+            main > * {
+                margin: 15px;
+            }
+            
+            .ferramentas {
+                display: inline-block;
+                border: 1px solid #000;
+                color: #000;
+                font-weight: bolder;
+                margin: 5px;
+                padding: 5px;
+                transition: 1s;
+
+                /* width: fit-content; */
+                border-radius: 10px;
+                background-color: #fff;
+            }
+
+            .ferramentas > img {
+                height:70px;
+                width: 70px;
+                /* border: 1px solid #fff; */
+                border: 1px solid rgba(255, 255, 255, 0);
+                /* border-radius: 50px; */
+            }
+
+            /* HOVER ANIMAÇÕES */
+            
+            .ferramentas:hover > img {
+                animation: img-mex var(--timing-1) linear 1;
+            }
+            
+            .ferramentas:hover {
+                background-color: rgba(0, 0, 0, 0.4);
+                transition: var(--timing-1);
+            }
+            
+            /* FIM HOVER ANIMAÇÕES */
+
+            .redes-sociais {
+                width: 50%;
+                margin: 10px auto;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+            }
+            
+            .redes-sociais img {
+                width: 64px;
+                /* margin: 5px 10px; */
+                border-radius: 50%;
+            }
+
+            .redes-sociais  img:hover {
+                animation: img-rotate .5s ease-in-out 0s 1 normal;
+                    /* animation-fill-mode: forwards; */
+            }
+
+            @media (max-width: 700px) {
+                
+                .redes-sociais {
+                    width: 90vw;
+                    margin: 10px auto;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-around;
+                }
+                
+                /* .redes-sociais {
+                    width: 90%;
+                    margin: 10px auto;
+                    display: block;
+                } */
+                
+                .redes-sociais img {
+                    /* width: 64px; */
+                    width: 64%;
+                    width: 64px;
+                    overflow: hidden;
+                }
+            }
+            a {
+                text-decoration: none;
+            }

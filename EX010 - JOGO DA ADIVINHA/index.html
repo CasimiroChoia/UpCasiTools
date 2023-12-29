@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UpCasiTools || jogo Da Adivinha</title>
+        <link rel="stylesheet" href="../animacoes.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="img/3.jpg" type="image/x-icon">
+        <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>jogo da adivinha</h1>
+    </header>
+    <main>
+        <img src="img/3.jpg" id="ti-kapecula" alt="" draggable="false">
+        <h2>o sr. Kapecula está a pensar num número de <strong>1</strong> até <strong>100</strong>, tente adivinhar.</h2>
+        <p><input type="number" min="1" value="1" max="100" name="entrada" id="entrada"></p>
+        <p><button id="baralhar" class="back-to-main">baralhar número</button></p>
+        <p><button id="adicionar" class="back-to-main">adivinhar</button></p>
+        <p>
+            <output id="saida"></output>
+            <br>
+            <img src="" id="sticker" draggable="false" style="border-radius: 0;">
+        </p>
+        <a href="../index.html"><button class="back-to-main">voltar</button></a>
+    </main>
+    <footer>
+        <p>obrigado pelo uso desta ferramenta da UpCasiTools. <span onclick="alert(aleatorio+10)">🤜🏼🤛🏼</span></p>
+    </footer>
+
+</body>
+</html>

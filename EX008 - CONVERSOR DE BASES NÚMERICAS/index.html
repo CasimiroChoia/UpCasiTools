@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UpCasiTools || conversor de bases númericas</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="8289995_25336.ico" type="image/x-icon">
+        <script defer src="js/script.js"></script>
+        <style>
+            .back-to-main {
+                font-weight: bolder;
+                font-family: monospace;
+                font-size: 20px;
+                transition: .5s;
+                border-radius: 10px;
+                border: none;
+                background-color: aliceblue;
+                box-shadow: 0 0 5px #000;
+
+                margin: 10px 5px 0;
+                padding: 5px 15px;
+                width: fit-content;
+            }
+
+            .back-to-main:hover {
+                letter-spacing: 2px;
+                transition: .5s;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>conversor de bases númericas</h1>
+    </header>
+    <main>
+        <p><label for="decimal">decimal:</label><input type="number" value="0" name="decimal" id="decimal"></p>
+        <hr>
+        <p><label for="binario">binario:</label><input type="number" min="-1" style="width: 175px" value="0" max="1" name="binario" id="binario"></p>
+        <hr>
+        <p><label for="octal">octal:</label><input type="number" min="-7" style="width: 175px" value="0" max="7"  name="octal" id="octal"></p>
+        <hr>
+        <p><label for="hexadecimal">hexadecimal:</label><input type="text" value="0" name="hexadecimal" id="hexadecimal"></p>
+        <hr>
+    </main>
+    <a href="../index.html"><button class="back-to-main">voltar</button></a>
+    <footer>
+        <p>obrigado pelo uso desta ferramenta da UpCasiTools.🤜🏼🤛🏼</p>
+    </footer>
+</body>
+</html>
