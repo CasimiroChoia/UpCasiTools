@@ -40,3 +40,20 @@
             let estilo = (estilo_desejado==="1500")?"as crianças":((estilo_desejado==="3000")?"os românticos":(estilo_desejado==="5000")?"comediantes":"amantes de acção")
 
             document.querySelector(".container-dos-filmes").insertAdjacentHTML("beforebegin","<p style='text-align:center;font-size:1.5em;'>você escolheu o pacote de "+ estilo_desejado +"kz, para "+ estilo +".</p>")
+
+
+            function unicoVideo() {
+                
+                for (index = 0; document.querySelectorAll("video").length > index ; index++){
+                    document.querySelectorAll("video")[index].pause()
+                }
+
+            }
+
+            function colocarFuncoes() {
+
+                for (index = 0; document.querySelectorAll("video").length > index ; index++){
+                    document.querySelectorAll("video")[index].setAttribute("onclick","unicoVideo()")
+                }
+                
+            }

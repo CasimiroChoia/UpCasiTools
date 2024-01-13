@@ -1,4 +1,25 @@
 
+                
+                @font-face {
+                    font-family: "animacao";
+                    src: url("fontes/animacao.ttf") format("TrueType");
+                }
+                
+                @font-face {
+                    font-family: "comedia";
+                    src: url("fontes/comedia.ttf") format("TrueType");
+                }
+                
+                @font-face {
+                    font-family: "accao";
+                    src: url("fontes/accao.ttf") format("TrueType");
+                }
+                
+                @font-face {
+                    font-family: "romance";
+                    src: url("fontes/romance1.ttf") format("TrueType");
+                }
+                
                 html {
                     scroll-behavior: smooth;
                     overscroll-behavior-y: auto;
@@ -97,6 +118,7 @@
                 footer {
                     background: rgb(102, 157, 246);
                     padding: 20px 0;
+                    margin-top: 15px;
                     margin-bottom: 5px;
                 }
 
@@ -159,22 +181,24 @@
                 
                 .detalhes-do-filme p,
                 .detalhes-do-filme b {
-                    font-size: 100%;
+                    font-size: 2em;
                     padding: 0 5px;
                     border-bottom: 2px solid rgb(0, 0, 0);
                 }
-
+                
                 @media (max-width:450px) {
                     .back-to-main {
                         display: block;
                     }
-
+                    
                     .filme {
                         overflow: auto;
                         height: fit-content;
                     }
-
+                    
+                    .detalhes-do-filme b,
                     .detalhes-do-filme p {
+                        font-size: smaller;
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: space-between;
@@ -214,16 +238,20 @@
 
                 .animacao {
                     background: linear-gradient(to bottom, green 30%,rgb(96, 125, 139))80%;
+                    font-family: "animacao", sans-serif;
                 }
-
+                
                 .romance {
                     background: linear-gradient(to bottom, rgb(255, 118, 142) 30%,rgb(96, 125, 139))80%;
+                    font-family: "romance", sans-serif;
                 }
-
+                
                 .comedia {
                     background: linear-gradient(to bottom, rgb(162, 160, 0) 30%,rgb(96, 125, 139))80%;
+                    font-family: "comedia", sans-serif;
                 }
-
+                
                 .accao {
                     background: linear-gradient(to bottom, red 30%,rgb(96, 125, 139))80%;
+                    font-family: "accao", sans-serif;
                 }

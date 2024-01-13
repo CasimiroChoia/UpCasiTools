@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Casimiro Choia">
+        <meta name="description" content="Calcule o rendimento final do seu dinheiro.">
+        <title>UpCasiTools || calculadora empreendedora</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="img/money-coins.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>calculadora empreendedora</h1>
+    </header>
+    <main>
+        <!-- <fieldset> -->
+            <legend>insere seus valores</legend>
+            <p><label for="rm">rendimento mensal (kz):</label><input type="number" step="1000" style="width: 175px" value="0" name="rm" id="rm"></p>
+            <hr>
+            <p><label for="taxa">porcentagem da taxa (%):</label><input type="number" step="1" style="width: 175px" value="0" name="taxa" id="taxa"></p>
+            <hr>
+            <p><label for="imposto">valor do imposto:</label><input type="number" value="0" name="imposto" id="imposto" readonly></p>
+            <hr>
+            <p><label for="rf">rendimento final (kz):</label><input type="number" value="0" step="1000" name="rf" id="rf" readonly></p>
+            <hr>
+            <button type="button" id="calcular" class="back-to-main">calcular</button>
+        <!-- </fieldset> -->
+    </main>
+    <a href="../index.html"><button class="back-to-main">voltar</button></a>
+    <footer>
+        <p>obrigado pelo uso desta ferramenta da UpCasiTools.🤜🏼🤛🏼</p>
+    </footer>
+    <script>
+        var imposto = document.querySelector("#imposto")
+        var taxa = document.querySelector("#taxa")
+        var rm = document.querySelector("#rm")
+        var rf = document.querySelector("#rf")
+        var button = document.querySelector("#calcular")
+        
+        // imposto = rm * (taxa)/100
+        // taxa = (rm/imposto) * 100
+        // rf = rm - imposto
+        // rm = rf + imposto
+
+        button.addEventListener("click",function() {
+            // if(rm.value == 0 && taxa.value == 0 && rf.value == 0 ) alert("[ERRO] Apenas Um campo deve ter o valor 0.");
+            
+            // if(rm.value !== 0 && taxa.value !== 0 && rf.value == 0) calcRf();
+            // if(rm.value == 0 && taxa.value !== 0 && rf.value !== 0) calcRm();
+
+            calcRf()
+
+        })
+
+        function calcRf() {
+            
+            // var valImposto = Number(imposto.value)
+            valTaxa = Number(taxa.value)
+            valRm = Number(rm.value)
+            valRf = Number(rf.value)
+            
+            imposto.value = (valRm * (valTaxa/100)).toFixed(2)
+            rf.value = valRm - (valRm * (valTaxa)/100)
+
+        }
+
+        function calcTAXA() {
+            
+            // var valImposto = Number(imposto.value)
+            var valTaxa = Number(taxa.value)
+            var valRm = Number(rm.value)
+            var valRf = Number(rf.value)
+            
+            rf.value = valRm - (valRm * (valTaxa)/100)
+
+        }
+
+        function calcRm() {
+            
+            // var valImposto = Number(imposto.value)
+            valTaxa = Number(taxa.value)
+            valRm = Number(rm.value)
+            valRf = Number(rf.value)
+            
+            // rm.value = valRf + (valRf * (valTaxa)/100)
+            imposto = valRf - (valTaxa/100)
+
+            rm.value = valRf + imposto
+
+        }
+        // alert(valImposto)
+        
+    </script>
+</body>
+</html>

@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <meta name="description" content=" «UpCasiTools Este é um site com diversas ferramentas e jogos ao seu dispor. Maked By Casimiro Choia">
+    <meta name="author" content="Casimiro Choia">
     <title>UpCasiTools</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
-<body>
+<body onload="verificarNavegador()">
     <header>
         <h1>bemvindo à UpCasiTools.🖐🏽🧐🖐🏽</h1>
     </header>
     <main>
-        <h2><img onclick="tocar()" src="img/favicon.ico" draggable="false"><br>escolhe uma ferramenta para usares.</h2>
+        <h2><img id="logo" onclick="tocar()" title="Clica em Mim" ondblclick="pausar()" src="img/favicon.ico" width="64" draggable="false"><br>escolhe uma ferramenta para usares.</h2>
         <div class="container-ferramentas">
             <!-- HORAS DO DIA -->
             <a href="EX001 - HORAS DO DIA/index.html" draggable="false">
@@ -80,12 +81,12 @@
             <a href="EX009 - CONVERSOR DE TEMPERATURAS/index.html" style="border: .5px solid rgba(0, 0, 0, 0);" draggable="false">
                 <div class="ferramentas">
                     <img src="EX009 - CONVERSOR DE TEMPERATURAS/img/sun.png" draggable="false" alt="Imagem Do Exeercicio">
-                    <p>Coversor de unidades de calor</p>
+                    <p>Conversor de unidades de calor</p>
                 </div>
             </a>
             <a href="EX010 - JOGO DA ADIVINHA/index.html" draggable="false">
                 <div class="ferramentas">
-                    <img src="EX010 - JOGO DA ADIVINHA/img/3.jpg" draggable="false" alt="Imagem Do Exeercicio">
+                    <img src="EX010 - JOGO DA ADIVINHA/img/3.jpg" style="border-radius: 50%;" draggable="false" alt="Imagem Do Exeercicio">
                     <p>jogo da adivinha</p>
                 </div>
             </a>
@@ -97,21 +98,21 @@
                 </div>
             </a>
             
-            <!-- 
-                <a href="EX007 - DE LISTA ORDENADA PARA DESORDENADA/index.html" draggable="false">
-                    <div class="ferramentas">
-                        <img src="img-teste.png" draggable="false" alt="Imagem Do Exeercicio">
-                        <p>1</p>
-                    </div>
-                </a>
-                
-                <a href="EX007 - DE LISTA ORDENADA PARA DESORDENADA/index.html" draggable="false">
-                    <div class="ferramentas">
-                        <img src="img-teste.png" draggable="false" alt="Imagem Do Exeercicio">
-                        <p>1</p>
-                    </div>
-                </a>
-            -->
+        
+            <a href="EX012 - JOGO DA CIGANA/index.html" draggable="false">
+                <div class="ferramentas">
+                    <img src="EX012 - JOGO DA CIGANA/favicon.png" draggable="false" alt="Imagem Do Exeercicio">
+                    <p>jogo da cigana</p>
+                </div>
+            </a>
+
+            <a href="EX013 - CALCULAR IMPOSTO, RENDIMENTO FINAL E RENDIMENTO MENSAL/index.html" draggable="false">
+                <div class="ferramentas">
+                    <img src="EX013 - CALCULAR IMPOSTO, RENDIMENTO FINAL E RENDIMENTO MENSAL/img/money-coins.png" draggable="false" alt="Imagem Do Exeercicio">
+                    <p>calculadora empreendedora</p>
+                </div>
+            </a>
+        
             
                         <!-- CALCULANDO À MÉDIA sem array() -->
             <!-- 
@@ -126,12 +127,12 @@
         </div>
     </main>
     <footer>
-        <p>voce encontra suas ferramentas de confiança Sempre na <b>UpCasiTools.</b></p>
+        <p>você encontra suas ferramentas de confiança Sempre na <b>UpCasiTools.</b></p>
         <div class="redes-sociais">
-            <a href="https:///free.facebook.com/casimirochoia"><img src="img/redes_sociais/facebook.png" alt="facebook imagem"></a>
-            <a href="https://www.instagram.com/casimirochoia/"><img src="img/redes_sociais/instagram.png" alt="instagram imagem"></a>
-            <a href="https://t.me/Casimiro50"><img src="img/redes_sociais/telegram.png" alt="telegram imagem"></a>
-            <a href=""><img src="img/redes_sociais/whatsapp.png" alt="whatsapp imagem"></a>
+            <a href="https:///free.facebook.com/casimirochoia"><img src="img/redes_sociais/facebook.png" title="Abrir Facebook" alt="facebook imagem"></a>
+            <a href="https://www.instagram.com/casimirochoia/"><img src="img/redes_sociais/instagram.png" title="Abrir Instagram" alt="instagram imagem"></a>
+            <a href="https://t.me/Casimiro50"><img src="img/redes_sociais/telegram.png" title="Abrir Telegram" alt="telegram imagem"></a>
+            <a href="https://api.whatsapp.com/send?phone=244948409127"><img src="img/redes_sociais/whatsapp.png" title="Abrir whatsapp" alt="whatsapp imagem"></a>
         </div>
     </footer>
 </body>

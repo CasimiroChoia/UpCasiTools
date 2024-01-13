@@ -12,7 +12,11 @@ function verif() {
     var idade = AnoAct-AnoNasc;
 
     if (idade<0){
-         return alert("Data de Nascimento inválida.")
+         return alert("[ERRO] Não existe pessoa que nasceu no futuro.")
+    }
+
+    if (AnoNasc<1900){
+         return alert("Uma pessoa que nasceu nesse ano a esta hora já estaria morta.")
     }
 
     // mais de 53 

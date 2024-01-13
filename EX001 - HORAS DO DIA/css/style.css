@@ -29,6 +29,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 0 20px black;
     overflow: hidden;
+    position: relative;
 }
 
 .HoraDoDia {
@@ -43,6 +44,7 @@ body {
 .smsHora {
     /* font-size: 1.7em; */
     min-width: 20ch;
+    z-index: 1;
 }
 
 @media (max-width:320px) {
@@ -85,4 +87,43 @@ img {
     100% {
         transform:rotateZ(360deg);
     }
+}
+
+.back-to-main {
+    font-weight: bolder;
+    font-family: monospace;
+    font-size: 20px;
+    transition: .5s;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 0 5px #000;
+
+    margin: 10px 5px 0;
+    padding: 5px 15px;
+}
+
+.back-to-main:hover {
+    letter-spacing: 2px;
+    transition: .5s;
+}
+
+/* .imagens {
+    position: relative;
+} */
+
+#natal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateZ(-20deg);
+    width: 50px;
+    
+    border: none;
+    display: none;
+    z-index: 0;
+}
+
+#natal:hover {
+    animation: rotate 0.2s ease-in-out 1;
 }

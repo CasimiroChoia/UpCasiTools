@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="vem vamos adivinhar qual é o número que o BBCT está a pensar. 💡💡💡">
+        <meta name="author" content="Casimiro Choia">
         <title>UpCasiTools || jogo Da Adivinha</title>
         <link rel="stylesheet" href="../animacoes.css">
         <link rel="stylesheet" href="css/style.css">
@@ -11,12 +13,12 @@
 </head>
 <body>
     <header>
-        <h1>jogo da adivinha</h1>
+        <h1>jogo da adivinh<span onclick="showDados()">a</span></h1>
     </header>
     <main>
         <img src="img/3.jpg" id="ti-kapecula" alt="" draggable="false">
-        <h2>o sr. Kapecula está a pensar num número de <strong>1</strong> até <strong>100</strong>, tente adivinhar.</h2>
-        <p><input type="number" min="1" value="1" max="100" name="entrada" id="entrada"></p>
+        <h2>o <span class="nome">bbct</span> está a pensar num número de <strong>1</strong> até <strong>100</strong>, tente adivinhar.</h2>
+        <p><input type="number" min="1" value="1" max="100" name="entrada" style="font-size: 1.5em;" id="entrada"></p>
         <p><button id="baralhar" class="back-to-main">baralhar número</button></p>
         <p><button id="adicionar" class="back-to-main">adivinhar</button></p>
         <p>

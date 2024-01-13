@@ -40,8 +40,12 @@
                 text-align: center;
                 font-family: monospace;
                 /* border: 1px solid #000; */
+                cursor: default;
                 overflow-x: hidden;
                 overflow-x: visible;
+                font-weight: lighter;
+                font-variant: small-caps;
+                font-style: italic;
             }
 
             body {
@@ -49,15 +53,16 @@
                 flex-direction: column;
                 place-items: center;
                 place-content: center;
-                background: rgb(146, 167, 255);
+                background: rgb(153, 153, 153);
 
                 color: #000;
                 
                 /* height: 100vh; */
                 width: 100vw;
-                padding: 5px 5px 0;
+                /* padding: 5px 5px 0; */
 
-                overflow: visible;
+                overflow-y: visible;
+                overflow-x: hidden;
             }
 
             body > * {
@@ -84,7 +89,8 @@
 
             main {
                 display: block;
-                max-width: 550px;
+                max-width: 700px;
+                margin: 0 10px;
                 min-width: 200px;
                 height: fit-content;
                 background: #fff;
@@ -177,6 +183,34 @@
                     overflow: hidden;
                 }
             }
+            
             a {
                 text-decoration: none;
+                cursor: pointer;
+            }
+
+            .ferramentas,
+            .ferramentas *,
+            .redes-sociais  * {
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            #logo {
+                animation: img-rotate 10s linear 0s infinite normal;
+                cursor: pointer;
+            }
+
+            @media (min-width: 1000px){
+                        div.ferramentas {
+                            filter:blur(2px);
+
+                        }
+
+
+                        div.ferramentas:hover {
+                            filter:blur(0px);
+
+                        }
+
             }

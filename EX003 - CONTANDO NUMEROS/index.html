@@ -4,29 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="conjugue o verbo contar sem parar com esta ferramenta 🧾🧾">
+    <meta name="author" content="Casimiro Choia">
     <title>UpCasiTools || contar</title>
     <link rel="shortcut icon" href="counter.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        button {
-            font-weight: bolder;
-            font-family: monospace;
-            font-size: 20px;
-            transition: .5s;
-            border-radius: 10px;
-            border: none;
-            background-color: transparent;
-            box-shadow: 0 0 5px #000;
-
-            margin: 10px auto 0;
-            padding: 5px 15px;
-        }
-
-        button:hover {
-            letter-spacing: 2px;
-            transition: .5s;
-        }
-    </style>
     <script defer src="js/script.js"></script>
 </head>
 <body>
@@ -36,7 +18,7 @@
     <main>
         <p><label for="inicio">inicio:</label><span class="before-input">(obrigatorio)</span><input type="number" id="inicio" accesskey="1" placeholder="(alt + 1)" title="Numero Inicial"></p>
         <p><label for="fim">fim:</label><span class="before-input">(obrigatório)</span><input type="number" id="fim" accesskey="2" placeholder="(alt + 2)" title="Número Final"></p>
-        <p><label for="passo">passo:</label><span class="before-input">(opcional)</span><input type="number" id="passo" accesskey="3" placeholder="(alt + 3)" title="Pulo" value="1" min="1"></p>
+        <p><label for="passo">passo:</label><span class="before-input">(opcional)</span><input type="number" id="passo" accesskey="3" placeholder="(alt + 3)" title="Pulo" value="1" min="1" readonly></p>
         <button accesskey="4">contar <sup>(alt + 4)</sup></button>
         <hr>
         
