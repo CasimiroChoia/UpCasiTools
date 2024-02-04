@@ -126,6 +126,7 @@
                 objecto.style = "animation: rodar-carta 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s 1 both;"
                 frase = Math.floor(Math.random()*limite)
                 document.getElementById("texto").innerHTML = `a cigana diz que:<br>\"${frases[frase]}\"`
+                document.getElementById("texto").value = `a cigana diz que:<br>\"${frases[frase]}\"`
                 copiar.style.display = "block"
         }
         
