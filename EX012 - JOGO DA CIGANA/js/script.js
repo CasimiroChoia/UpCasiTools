@@ -10,7 +10,7 @@
             audio.setAttribute("src","audio/1.mp3");
             audio.setAttribute("type","mpeg");
             audio.setAttribute("preload","none");
-            audio.setAttribute("repeat");
+            audio.setAttribute("repeat","True");
 
             document.getElementById("logo").onclick = () => audio.play();
 
@@ -126,7 +126,7 @@
                 objecto.style = "animation: rodar-carta 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s 1 both;"
                 frase = Math.floor(Math.random()*limite)
                 document.getElementById("texto").innerHTML = `a cigana diz que:<br>\"${frases[frase]}\"`
-                document.getElementById("texto").value = `a cigana diz que:<br>\"${frases[frase]}\"`
+                //document.getElementById("texto").value = `a cigana diz que:<br>\"${frases[frase]}\"`
                 copiar.style.display = "block"
         }
         
@@ -145,7 +145,7 @@
        
        document.querySelector("#copiar").onclick = function() {
             try {
-                navigator.clipboard.writeText(document.querySelector("#texto").value)
+                navigator.clipboard.writeText(document.querySelector("#texto").innerText)
                 alert("Copiado Com Sucesso")
             } catch (error) {
                 alert("Copiado Sem Sucesso")
