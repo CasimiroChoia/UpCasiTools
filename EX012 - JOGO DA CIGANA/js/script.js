@@ -10,6 +10,7 @@
             audio.setAttribute("src","audio/1.mp3");
             audio.setAttribute("type","mpeg");
             audio.setAttribute("preload","none");
+            audio.setAttribute("repeat");
 
             document.getElementById("logo").onclick = () => audio.play();
 
@@ -140,8 +141,16 @@
 
        // var texto = document.querySelector("#texto")
 
-		
-	    //document.querySelector("#copiar").addEventListener("click", copiarTexto())
+       
+       document.querySelector("#copiar").onclick = function() {
+            try {
+                navigator.clipboard.writeText(document.querySelector("#texto").value)
+                alert("Copiado Com Sucesso")
+            } catch (error) {
+                alert("Copiado Sem Sucesso")
+            }
+       }
+       //document.querySelector("#copiar").addEventListener("click", copiarTexto())
 
 /*function copiarTexto() {
 	texto = document.querySelector("p#texto")
