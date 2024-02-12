@@ -14,6 +14,7 @@
 
             document.getElementById("logo").onclick = () => audio.play();
 
+            //#region frases
             var sms1 = "Nunca vi um pombo morrer por comer comida do chão, então qual é o problema do ser humano?";
             var sms2 = "A cada dia que você espera, é um outro dia que você nunca vai poder recuperar.";
             var sms3 = "Tenha uma política: não aceito conselhos a menos que os peça.";
@@ -31,15 +32,15 @@
             var sms15 = "A vida é da cor que pintamos ela triste, feliz, alegre ou sombria.";
             var sms16 = "Não há nada tão equitativamente distribuído no mundo como a inteligência: todos estão convencidos de que têm o suficiente.";
             var sms17 = "Nunca nos devemos deixar persuadir senão por evidência da razão.";
-            var sms18 = "Quem ri por último é quem tem o raciocínio mais devagar. ";
+            var sms18 = "Quem ri por último, é quem tem o raciocínio mais devagar. ";
             var sms19 = "Pessoas certas moram em lugares errados. ";
             var sms20 = "Quando penso que te esqueci, passa um cachorro e lembro de você.";
             var sms21 = "As aparências enganam ... e em alguns casos assustam. ";
             var sms22 = "Sua foto de perfil está durando mais que muitos namoros por aí. ";
             var sms23 = "Quando a mulher diz: Faz o que você quiser, ela quis dizer: Experimenta fazer pra ver o que te acontece. ";
             var sms24 = "Para realizar coisas grandes, comece pelo pequeno. ";
-            var sms25 = "Pés firmes no chão e cabeça erguida e segue em frente! ";
-            var sms26 = "Namore uma calculadora, pelo menos ela sabe dar valor. ";
+            var sms25 = "Pés firmes no chão, cabeça erguida     e segue em frente! ";
+            var sms26 = "Namore uma calculadora, pelo menos ela sabe dar valor as pessoas. ";
             var sms27 = "Viva os melhores momentos da sua vida por que os piores virão ✌❤";
             var sms28 = "Seja seu foco. Faça as coisas por você. ";
             var sms29 = "A sua vida só vai pra frente depois que você se desapega das pessoas que te levam pra trás! ";
@@ -47,7 +48,7 @@
             var sms31 = "Colecione momentos, não coisas. ";
             var sms32 = "Não seja tão mente-aberta, o seu cérebro pode cair! ";
             var sms33 = "Independente de quem você realmente é, as pessoas vão te enxergar como elas quiserem. ";
-            var sms34 = "Sem pressa. Sem vírgula. Sem ponto final. Sem briga. Sem mágoa. Sem dor. Só amor, por favor. ";
+            var sms34 = "Sem pressa, Sem vírgula, Sem ponto final, Sem briga, Sem mágoa, Sem dor, Só amor, por favor. ";
             var sms35 = "E não podemos evitar que a vida.  \nTrabalhe com o seu relógio invisível.  \nTirando o tempo de tudo que é perecível.";
             var sms36 = "A medida de amar é amar sem medidas.";
             var sms37 = "As vezes você se pergunta, porque é que ele é tão calado, nem fala de amor quase nada, e nem fica sorrindo ao seu lado.";
@@ -61,9 +62,13 @@
             var sms45 = "O tempo está correndo! Pense no que ainda pode acontecer.";
             var sms46 = "A verdade é que ninguém se encaixa em lugar algum.";
             var sms47 = "É inútil esperar por uma coisa que não vai acontecer. ";
-            var sms48 = "Seja mesmo agarra, afinal de contas trabalhas sen ajuda😶. ";
-            var sms49 = "O segredo da riqueza é ser agarrdo✅💰💳💸. ";
+            var sms48 = "Seja mesmo agarrado, afinal de contas trabalhas sen ajuda😶. ";
+            var sms49 = "O segredo da riqueza é ser agarrado✅💰💳💸. ";
             var sms50 = "Namore o teu best friend💑👩🏼‍🤝‍🧑🏻. ";
+            var sms51 = "Pense muitas vezes antes de agir..."
+            var sms52 = "Se queres evoluir na vida, sai de Angola."
+            var sms53 = "visão + talento é = a dinheiro, pega visão."
+            //#endregion
 
             var frases = [
                 sms1,
@@ -115,7 +120,10 @@
                 sms47,
                 sms48,
                 sms49,
-                sms50
+                sms50,
+                sms51,
+                sms52,
+                sms53
             ]
 
             var limite = frases.length
@@ -126,6 +134,7 @@
                 objecto.style = "animation: rodar-carta 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s 1 both;"
                 frase = Math.floor(Math.random()*limite)
                 document.getElementById("texto").innerHTML = `a cigana diz que:<br>\"${frases[frase]}\"`
+                falar( "a cigana diz que:" + frases[frase])
                 //document.getElementById("texto").value = `a cigana diz que:<br>\"${frases[frase]}\"`
                 copiar.style.display = "block"
         }
@@ -151,6 +160,15 @@
                 alert("Copiado Sem Sucesso")
             }
        }
+
+       function falar(voz = "não conseguimos identificar o texto") {
+
+        window.speechSynthesis.cancel()
+        palavras = new SpeechSynthesisUtterance(voz);
+        fala = window.speechSynthesis;
+        // if (window.speechSynthesis.speaking === True) window.speechSynthesis.cancel(new SpeechSynthesisUtterance(voz))
+        fala.speak(palavras);
+    }
        //document.querySelector("#copiar").addEventListener("click", copiarTexto())
 
 /*function copiarTexto() {

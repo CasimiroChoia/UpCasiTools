@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpCasiTools || Pedra, Papel e Tesoura</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- <script src="js/script.js" type="text/javascript"></script> -->
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>jogo</h1>
+        <h2>Pedra, Papel e Tesoura</h2>
+    </header>
+    <main>
+        <audio src="audio/aplausos.mp3" id="aplausos"></audio>
+        <audio src="audio/perdeu_a_jogada.mp3" id="perdeu"></audio>
+        <p>
+            escolhe a sua jogada: 
+            <select name="jogada" id="jogada" accesskey="1" >
+                <option value="nenhum selecionado" selected disabled>obrigatorio</option>
+                <option value="pedra">pedra</option>
+                <option value="papel">papel</option>
+                <option value="tesoura">tesoura</option>
+            </select>
+        </p>
+        <p>
+            definir limite???: 
+            <select name="limite" id="limite" accesskey="2" >
+                <option value="opcional" selected>indefinido (opcional)</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </p>
+        <p>
+            <button class="back-to-main" id="play1">jogar</button>
+            <p id="load">...</p>
+        </p>
+        <div id="duelo">
+            <div class="img">
+                <p>eu</p>
+                <img src="favicon.png" id="img-jogador" contenteditable="true" class="aaa" alt="#">
+                <p class="meus_pontos pontos">0</p>
+            </div>
+            <div class="img">
+                <p>PC</p>
+                <img src="favicon.png" id="img-adversario" contenteditable="true" class="aaa" alt="#">
+                <p class="pc_pontos pontos">0</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="back-to-main" id="play2" accesskey="3" >jogar</button>
+            <button class="back-to-main" id="repetir">repetir</button>
+            <a href="../index.html"><button class="back-to-main">voltar</button></a>
+        </div>
+    </main>
+    <footer>
+        Obrigado Pelo Uso Desta Ferramenta Da UpCasiTools.🤜🏼🤛🏼 
+    </footer>
+</body>
+</html>
