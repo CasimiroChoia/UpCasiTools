@@ -1,8 +1,20 @@
-var inicio = document.getElementById("inicio");
+        var inicio = document.getElementById("inicio");
         var fim = document.getElementById("fim");
         var passo = document.getElementById("passo");
         var resultado = document.querySelector(".cont");
         var button1 = document.querySelectorAll("button")[0];
+
+        document.querySelector('body').addEventListener("contextmenu",function(evt) {
+            // jarvis("ação bloqueada pelo site.")
+            jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+            evt.preventDefault()
+        })
+        
+        function jarvis(voz) {
+            window.speechSynthesis.cancel();
+            objInteracao = new SpeechSynthesisUtterance(voz);
+            window.speechSynthesis.speak(objInteracao);
+        }
 
         document.querySelectorAll("main")[0].addEventListener("input",function(){
             if (inicio.value != 0 || fim.value != 0) {

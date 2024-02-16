@@ -22,6 +22,18 @@
             var pc_opcoes = ["pedra","papel","tesoura"]                         // variavel que guarda os valores que o pc escolherá no game
             // var data = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()} `
             //#endregion
+
+            document.querySelector('body').addEventListener("contextmenu",function(evt) {
+                // jarvis("ação bloqueada pelo site.")
+                jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+                evt.preventDefault()
+            })
+            
+            function jarvis(voz) {
+                window.speechSynthesis.cancel();
+                objInteracao = new SpeechSynthesisUtterance(voz);
+                window.speechSynthesis.speak(objInteracao);
+            }
             
             
             

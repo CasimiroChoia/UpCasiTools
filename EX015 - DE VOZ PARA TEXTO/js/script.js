@@ -4,7 +4,7 @@
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 
     // Definir idioma, se necessário
-    // recognition.lang = 'pt-BR';
+     recognition.lang = 'pt-BR';
 
     // Definir a continuidade da escuta
     recognition.continuous = true;
@@ -18,25 +18,31 @@
     document.querySelector("#stop").onclick = function(event) {
 
       if (document.getElementById('output').innerHTML != "" ) {
-        var transcript = event.results[event.results.length - 1][0].transcript;
-        document.getElementById('output').textContent = transcript;
+        // var transcript = event.results[event.results.length - 1][0].transcript;
+        // document.getElementById('output').textContent = transcript;
+        recognition.stop()
       } else {
-          jarvis("Diz alguma coisa antes...")
+        jarvis("Diz alguma coisa antes...")
         return alert("Diz alguma coisa antes...")
       }
     };
 
     // Lidar com erros
     recognition.onerror = function(event) {
-      jarvis("aconteceu um erro com a " + event.error)
+      // jarvis("aconteceu um erro com a " + event.error)
       // alert("'Erro de reconhecimento de fala: " + event.error)
       console.error('Erro de reconhecimento de fala: ', event.error);
     };
 
     // Adicionar um evento de clique ao botão para iniciar o reconhecimento
     document.getElementById('start').addEventListener('click', function() {
-      recognition.start();
-      jarvis("a gravar.")
+      if (navigator.onLine === true) {
+        recognition.start();
+        jarvis("a gravar.")
+      } else {
+        jarvis("você não está conectado com a internet.")
+        return alert("você não está conectado com a internet.")
+      }
     });
   } else {
     // Se o navegador não suportar, exibir uma mensagem de aviso

@@ -23,6 +23,18 @@
                 farinheit.value = -459.67 + Number(kelvin.value)*1.8;
             })
 
+            document.querySelector('body').addEventListener("contextmenu",function(evt) {
+                // jarvis("ação bloqueada pelo site.")
+                jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+                evt.preventDefault()
+            })
+            
+            function jarvis(voz) {
+                window.speechSynthesis.cancel();
+                objInteracao = new SpeechSynthesisUtterance(voz);
+                window.speechSynthesis.speak(objInteracao);
+            }
+
             function zerar() {
                 this.focus()
 

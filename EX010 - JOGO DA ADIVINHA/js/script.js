@@ -6,6 +6,18 @@
             let sticker =           document.getElementById("sticker")
             // Math.floor(Math.random()) 
 
+            document.querySelector('body').addEventListener("contextmenu",function(evt) {
+                // jarvis("ação bloqueada pelo site.")
+                jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+                evt.preventDefault()
+            })
+            
+            function jarvis(voz) {
+                window.speechSynthesis.cancel();
+                objInteracao = new SpeechSynthesisUtterance(voz);
+                window.speechSynthesis.speak(objInteracao);
+            }
+
             let lista_feliz = ["img/stickers/h1.webp","img/stickers/h2.webp","img/stickers/h3.webp","img/stickers/h4.webp"]
             let lista_triste = ["img/stickers/s1.webp","img/stickers/s2.webp","img/stickers/s3.jpg","img/stickers/s4.webp"]
 

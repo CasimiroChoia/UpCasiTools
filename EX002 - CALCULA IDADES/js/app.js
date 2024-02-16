@@ -1,6 +1,16 @@
 
 
+document.querySelector('body').addEventListener("contextmenu",function(evt) {
+	// jarvis("ação bloqueada pelo site.")
+	jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+	evt.preventDefault()
+})
 
+function jarvis(voz) {
+	window.speechSynthesis.cancel();
+	objInteracao = new SpeechSynthesisUtterance(voz);
+	window.speechSynthesis.speak(objInteracao);
+}
 
 function verif() {
     var AnoNasc = Number(document.getElementById("AnoNasc").value)

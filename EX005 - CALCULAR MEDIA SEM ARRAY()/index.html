@@ -104,6 +104,18 @@
         document.writeln("<footer>")
         document.writeln("<p>obrigado pelo uso desta ferramenta da UpCasiTools.🤜🏼🤛🏼</p>")
         document.writeln("</footer>")
+
+        document.querySelector('body').addEventListener("contextmenu",function(evt) {
+        // jarvis("ação bloqueada pelo site.")
+        jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+        evt.preventDefault()
+        })
+
+        function jarvis(voz) {
+            window.speechSynthesis.cancel();
+            objInteracao = new SpeechSynthesisUtterance(voz);
+            window.speechSynthesis.speak(objInteracao);
+        }
         
     </script>
     

@@ -11,7 +11,7 @@
 }
 
 *::placeholder {
-    font-size: 20px;
+    font-size: 13px;
     color: rgba(0, 0, 0, 0.8);
     font-weight: bolder;
 }
@@ -50,7 +50,7 @@ input {
 
 main p > * {
     overflow-x: auto;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 #showList {

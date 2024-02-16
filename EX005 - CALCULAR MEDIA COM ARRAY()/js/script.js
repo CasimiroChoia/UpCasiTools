@@ -9,6 +9,18 @@ function validacao() {
 	 }
 }
 
+document.querySelector('body').addEventListener("contextmenu",function(evt) {
+	// jarvis("ação bloqueada pelo site.")
+	jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+	evt.preventDefault()
+})
+
+function jarvis(voz) {
+	window.speechSynthesis.cancel();
+	objInteracao = new SpeechSynthesisUtterance(voz);
+	window.speechSynthesis.speak(objInteracao);
+}
+
         let listaDeOpcoes = Array()
         let input = document.querySelector("input#numero")
         let select = document.querySelector("select#caixa-numerica")

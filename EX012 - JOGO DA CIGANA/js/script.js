@@ -14,6 +14,18 @@
 
             document.getElementById("logo").onclick = () => audio.play();
 
+            document.querySelector('body').addEventListener("contextmenu",function(evt) {
+                // jarvis("ação bloqueada pelo site.")
+                jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+                evt.preventDefault()
+            })
+            
+            function jarvis(voz) {
+                window.speechSynthesis.cancel();
+                objInteracao = new SpeechSynthesisUtterance(voz);
+                window.speechSynthesis.speak(objInteracao);
+            }
+
             //#region frases
             var sms1 = "Nunca vi um pombo morrer por comer comida do chão, então qual é o problema do ser humano?";
             var sms2 = "A cada dia que você espera, é um outro dia que você nunca vai poder recuperar.";

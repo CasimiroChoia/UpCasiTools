@@ -1,11 +1,23 @@
-var lista = new Array()
-var input = document.querySelector("input#inNome")
+        var lista = new Array()
+        var input = document.querySelector("input#inNome")
         var addList = document.querySelectorAll("button")[0]
         var cleanList = document.querySelectorAll("button")[1]
         var desordernarList = document.querySelectorAll("button")[2]
         var showList = document.querySelector("#showList")
         var outName = document.getElementById("outName")
         var aleatorio = 0
+
+        document.querySelector('body').addEventListener("contextmenu",function(evt) {
+            // jarvis("ação bloqueada pelo site.")
+            jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+            evt.preventDefault()
+        })
+        
+        function jarvis(voz) {
+            window.speechSynthesis.cancel();
+            objInteracao = new SpeechSynthesisUtterance(voz);
+            window.speechSynthesis.speak(objInteracao);
+        }
 
         function adicionar() {
             outName.innerText = ""

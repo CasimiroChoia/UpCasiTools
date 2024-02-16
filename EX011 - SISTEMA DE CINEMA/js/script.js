@@ -12,6 +12,18 @@
             let comedia = document.querySelector(".comedia");
             let accao = document.querySelector(".accao");
 
+            document.querySelector('body').addEventListener("contextmenu",function(evt) {
+                // jarvis("ação bloqueada pelo site.")
+                jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+                evt.preventDefault()
+            })
+            
+            function jarvis(voz = "audio do site indisponivel.") {
+                window.speechSynthesis.cancel();
+                objInteracao = new SpeechSynthesisUtterance(voz);
+                window.speechSynthesis.speak(objInteracao);
+            }
+
             function display(valor) {       //  COLOCANDO UM DISPLAY NONE EM TODOS OS ESTILOS
                 animacao.style = "display: "+ valor +";";
                 romance.style = "display: "+ valor +";";
@@ -29,6 +41,7 @@
                 display("none")
                 comedia.style.display = "block"
             } else if( estilo_desejado == "casimiro" ) {
+                jarvis("Seja bemvindo Senhor Casimiro.")
                 alert("Seja bemvindo Sr. Casimiro.✔🤜🏼🤛🏼")
                 document.querySelectorAll(".seccoes")[0].style = "display:flex;"
                 document.querySelectorAll(".seccoes")[1].style = "display:flex;"
@@ -39,7 +52,9 @@
 
             let estilo = (estilo_desejado==="1500")?"as crianças":((estilo_desejado==="3000")?"os românticos":(estilo_desejado==="5000")?"comediantes":"amantes de acção")
 
-            document.querySelector(".container-dos-filmes").insertAdjacentHTML("beforebegin","<p style='text-align:center;font-size:1.5em;'>você escolheu o pacote de "+ estilo_desejado +"kz, para "+ estilo +".</p>")
+            if (estilo_desejado != "casimiro") {
+                document.querySelector(".container-dos-filmes").insertAdjacentHTML("beforebegin","<p style='text-align:center;font-size:1.5em;'>você escolheu o pacote de "+ estilo_desejado +"kz, para "+ estilo +".</p>")
+            }
 
 
             function unicoVideo() {
