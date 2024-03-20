@@ -1,0 +1,73 @@
+:root {
+    --angle: 180deg;
+}
+
+@keyframes opaque {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    text-align: center;
+    /* border: 1px solid; */
+    transition: 1s;
+    text-transform: capitalize;
+    cursor: default;
+    z-index: 0;
+}
+
+body {
+    background: rgb(118, 198, 252);
+}
+
+.containerGarrafa {
+    
+    & img {
+        width: 60%;
+        max-width: 300px;
+        margin: 25px;
+        z-index: -5;
+        cursor: none;
+
+    }
+
+    & figcaption {
+        font-weight: bolder;
+        color: white;
+    }
+}
+  
+    .containerGarrafa img {
+        min-width: 175px;
+        width: 60%;
+        max-width: 300px;
+        margin: 25px;
+        z-index: -5;
+        cursor: none;
+
+        /* &:hover {
+            animation: girar 2s ease-in-out 0s 1 normal both;
+        } */
+    }
+
+    .containerGarrafa figcaption {
+        font-weight: bolder;
+        color: white;
+    }
+
+button {
+    border-radius: 5px;
+    padding: 10px;
+    margin-block: 3px;
+    cursor: pointer;
+    z-index: 10;
+    border: 0;
+    outline: 0;
+}

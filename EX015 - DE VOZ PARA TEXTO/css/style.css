@@ -1,3 +1,6 @@
+
+
+
 *:not(html) {
     padding: 0;
     margin: 0;
@@ -52,11 +55,11 @@ body {
 #output {
     font-family:monospace;
     font-weight: lighter;
+    line-height: 100%;
     font-size: 16px;
     overflow: auto;
-    text-align: justify;
+    text-align: center;
     border-radius: 10px;
-    min-height: 80px;
     margin: 15px auto 0px;
     padding: 10px;
     width: 70%;

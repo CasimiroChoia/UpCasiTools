@@ -7,8 +7,7 @@
             // Math.floor(Math.random()) 
 
             document.querySelector('body').addEventListener("contextmenu",function(evt) {
-                // jarvis("ação bloqueada pelo site.")
-                jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+                jarvis("Menù Bloqueado.")
                 evt.preventDefault()
             })
             

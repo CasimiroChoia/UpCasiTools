@@ -1,0 +1,160 @@
+@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	@media (min-width:320px) {	
+		* {
+			text-transform:capitalize;
+		}
+		
+		main > h1 {
+			font-size: 0.8cm;
+			text-align: center;
+		}
+
+		.containerSocial {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.social {
+			display: block;
+			width: fit-content;
+			text-align:center;
+			border: 0.5px solid black;
+			border-radius: 5px;
+			background-color: #ddd;
+			margin: 10px auto;
+			padding: 10px;
+			transition-duration:.5s;
+			transition-delay:ease-out;
+			font-size: 80%;
+		}
+			
+		.social:hover {
+			background: rgba(0, 0, 0, 0.5);
+		}
+		 
+		.spinner {
+			background-image:url("../imagens/ball.png");
+			background-attachment: fixed;
+			background-repeat:no-repeat;
+			background-position-y: center;
+			background-position-x: center;
+			background-size: 30px;
+			background-color: brown;
+			
+			margin:auto;
+			width: 50px;
+			height: 100px;
+			padding: 40px 10px 20px;
+
+			border: 20px solid rgb( 255, 0, 0);
+			border-radius: 50%;
+			border-top-color: grey;
+			border-top-width: 1px;
+			border-bottom-width: 11px;
+
+			box-shadow:inset 0px 0px 25px 10px #000000;
+			animation: spin 0.0001s linear infinite;
+		}
+		
+		.load {
+			width: 60%;
+			display: block;
+			/*height: 100px;*/
+			text-align:center;
+			border: 0.5px solid black;
+			border-radius: 5px;
+			background-color: #ddd;
+			margin: 10px auto;
+			padding: 10px;
+		}
+		
+		.hipnose {
+			height: 100px;
+			width: 100px;
+			margin:auto;
+			background-image:url("../imagens/spiral.png");
+			background-size: 100px;
+			background-repeat:no-repeat; 
+			animation: spin 0.8s linear infinite;
+		}
+	}
+
+					/* ==================================================PARA COMPUTADOR==================================================== */
+
+					@media (min-width:940px) {	
+						* {
+							text-transform:capitalize;
+						}
+						
+						main > h1 {
+							font-size: 0.8cm;
+							text-align: center;
+						}
+				
+						.social {
+							display: inline-block;
+							width: 30%;
+							text-align:center;
+							border: 0.5px solid black;
+							border-radius: 5px;
+							background-color: #ddd;
+							margin: 10px auto;
+							padding: 10px;
+							transition-duration:.5s;
+							transition-delay:ease-out;
+							}
+							
+							.social:hover {
+								background: rgba(0, 0, 0, 0.5);
+							}
+						.spinner {
+							margin:auto;
+							background-image:url("../imagens/ball.png");
+							background-repeat:no-repeat;
+							background-position-y: center;
+							background-position-x: center;
+							background-size: 30px;
+							background-color: brown;
+							width: 50px;
+							height: 100px;
+							padding: 40px 10px 20px;
+							border: 20px solid rgb( 255, 0, 0);
+							border-radius: 50%;
+							border-top-color: grey;
+							border-top-width: 1px;
+							border-bottom-width: 11px;
+							animation: spin 0.0001s linear infinite;
+							box-shadow:inset 0px 0px 25px 10px #000000;
+						}
+						
+						.load {
+							width: 60%;
+							max-width: 200px;
+							display: block;
+							/*height: 100px;*/
+							text-align:center;
+							border: 0.5px solid black;
+							border-radius: 5px;
+							background-color: #ddd;
+							margin: 10px auto;
+							padding: 10px;
+						}
+						
+						.hipnose {
+							height: 100px;
+							width: 100px;
+							margin:auto;
+							background-image:url("../imagens/spiral.png");
+							background-size: 100px;
+							background-repeat:no-repeat; 
+							animation: spin 0.8s linear reverse infinite;
+						}
+					}

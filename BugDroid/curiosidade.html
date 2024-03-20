@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site</title>
+    <link rel="shortcut icon" href="imagens/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <style type="text/css">
+    	@keyframes piscar {
+    		50% {
+    			color: transparent;
+    		}
+    	}
+    	
+    	main {
+    		padding-top: 4px;
+    	}
+    	
+    	.box {
+    		margin-top:5px;
+    		display: block;
+    		border-radius:10px;
+    		background-color: #ddd;
+    		border: 3px solid #eee;
+			min-height: 100px;
+    	}
+    	
+    	.box  p {
+		  	animation: piscar 0.1s infinite;
+			border-radius:10px;
+			background-color:#f2f2f2;
+			font-family:Courier new,monospace,sans-serif;
+			font-variant:small-caps;
+    		line-height: 1em;
+    		margin:3px 6px;
+    		text-align:center;
+    		text-indent: 0px;
+    		/* position:absolute; */
+    		/* top:0px; */
+    		width: calc(90% - 80px);
+    	}
+    	
+    	.box img {
+    		border-radius:9px;
+    		width: 80px;
+    		margin-left:3px;
+    		padding:5px;
+    		float: left;
+    	}
+    	
+    	.i {
+    		display:inline-block;
+    	}
+    	
+    	span.mais {
+    		font-size: 11px;
+    		font-style:italic;
+    	}
+    </style>
+</head>
+<body><span id="topo" ></span>
+    <header>
+        <h1>Saiba Mais</h1>
+        <p> Explore mais meu amigo pois esse conhecimento um dia vai valer a pena .</p>
+    </header>
+    <nav>
+        <a href="index.html">Casa</a>
+        <a href="curiosidade.html">Curiosidades</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="fale-connosco.html">Fale conosco</a>
+    </nav>
+    <main>
+    <div class="box" >
+    	<img src="imagens/anime.png" class="i" >
+    	<p class="i" >o mundo otaku te espera... <span class="mais" >Saiba Mais</span></p>
+    </div>
+    
+    <div class="box" >
+    	<img src="imagens/ball.png" class="i" >
+    	<p class="i" >Você quer saber mais Sobre <strong>Futbool</strong>... <span class="mais" >Saiba Mais</span></p>
+    </div>
+    
+    <div class="box" >
+    	<img src="imagens/wwe.jpg" class="i" >
+    	<p class="i" >Noticias sobre o <strong>WWE</strong>&lt;&lt;Lutador Roman foi... <span class="mais" >Saiba Mais</span></p>
+    </div>
+    <div class="box" >
+	    <img src="imagens/laurinhalero.png" class="i" >
+	    <p class="i" >Laurina é uma das radialistas do <strong>Brazil</strong>... <span class="mais" >Saiba Mais</span></p>
+    </div>
+    </main>
+    <a href="#topo" >Regressar Ao Topo</a>
+    <footer>
+		<p>Este site foi criado por <strong><a href="" >Casimiro Choia</a></strong> com a orientação de <strong><a href="https://www.gustavoguanabara.github.io" >Gustavo Guanabara</a> .</strong></p>
+		<img src="imagens/crop-face.png" alt="casimiro choia" >
+    </footer>
+</body>

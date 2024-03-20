@@ -8,8 +8,7 @@
         var aleatorio = 0
 
         document.querySelector('body').addEventListener("contextmenu",function(evt) {
-            // jarvis("ação bloqueada pelo site.")
-            jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+            jarvis("Menù Bloqueado.")
             evt.preventDefault()
         })
         
@@ -71,15 +70,7 @@
                 }
             } else {
                 alert("Esta lista já foi feita insere novamente os valores.")
-                // showList.innerHTML = ""
-                // while (true) {
-                //     alert("loop")
-                //     aleatorio = Math.floor(Math.random()*(backupLista.length))
-                //     if (backupLista[aleatorio] === undefined ) continue
-                //     outName.innerHTML += `${backupLista[aleatorio]}<br>`
-                //     delete lista[aleatorio]
-                    
-                //     if (backupLista.every(function(cada_membro) { return cada_membro === undefined })) break
+
                     
             }
         }

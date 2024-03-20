@@ -3,6 +3,10 @@ var btnSortear = document.querySelectorAll("button[type=button]")[1];
 var ListaParaOSorteio = new Array()
 var nome = document.getElementById("inNome")
 
+document.querySelector('body').addEventListener("contextmenu",function(evt) {
+	jarvis("Menù Bloqueado.")
+	evt.preventDefault()
+})
 btnAdicionar.addEventListener("click",function(){
     if (document.getElementById("outName").innerText !== "Esperando Pelo Teu Sinal") document.getElementById("outName").innerText = ""
     if (nome.value === "") {

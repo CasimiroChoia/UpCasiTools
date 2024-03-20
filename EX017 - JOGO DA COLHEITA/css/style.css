@@ -1,0 +1,201 @@
+
+        :root {
+            --backImage: url("../img/z.png");
+            --bordas: 5px;
+            --imgTamanho:15%;
+
+            --posicaoHorizontal: 0;
+            --limite: 200px;
+            --posicaoVertical: 0;
+            --caidaDuracao: 15s;
+            /* TONS DE AZUL */
+            --transparent: rgba(0, 0, 0, 0);
+            --azul01:  rgba(0, 0, 0, 0.1);
+            --azul02:  rgba(0, 0, 0, 0.2);
+            --azul03:  rgba(0, 0, 0, 0.3);
+            --azul04:  rgba(0, 0, 0, 0.4);
+            --azul05:  rgba(0, 0, 0, 0.5);
+            --azul06:  rgba(0, 0, 0, 0.6);
+            --azul07:  rgba(0, 0, 0, 0.7);
+            --azul08:  rgba(0, 0, 0, 0.8);
+            --azul09:  rgba(0, 0, 0, 0.9);
+            --azul10:  rgba(0, 0, 0,   1);
+        }
+
+        @keyframes caindo {
+            0% {
+                top: var(--limite);
+            }
+
+            100% {
+                top: var(--posicaoVertical);
+                transition: all 1s ;
+                -o-transition: all 1s ;
+                -ms-transition: all 1s ;
+                -moz-transition: all 1s ;
+                -webkit-transition: all 1s ;
+            }
+        }
+        
+        * {
+            text-transform:capitalize;
+            cursor: default;
+            /* transition: all 1s; */
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            /* background: #000; */
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-track-piece {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+            border-radius: 10px;
+        }
+
+        body {
+            display: grid;
+            display: -ms-grid;
+            display: -moz-grid;
+            padding: 0;
+
+            place-items: center;
+            -ms-grid-row-align: center;
+            min-height: 100vh;
+            scroll-snap-type: proximity;
+            overflow-x: hidden;
+            /* background: var(--backImage); */
+            background: rgba(0, 0, 0, 0.5);
+            background-size: 60px;
+        }
+        
+        #telaInicial {
+            width: 80%;
+            max-width:650px;
+            z-index: 100;
+            border: 0;
+            box-shadow: 0 0 10px #000;
+            /* background: rgba(0, 0, 0, 0.1); */
+            /* color: #fff; */
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: justify;
+            line-height: 1.5;
+            
+            h1 {
+                border-bottom: 2px dashed #000;
+            }
+            
+            .buttons button:hover {
+                letter-spacing: 2.5px;
+            }
+        }
+
+        #telaInicial::backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .button {
+            padding: 0.25em 1.5em;
+            border: none;
+            font-weight: bolder;
+            outline: none;
+            inset: 0;
+        }
+
+        #jogar {
+            background-color: rgba(0, 128, 0, 0.5);
+            &:hover {
+                transition: all 1s linear;
+                letter-spacing: 3px;
+                background-color: rgba(0, 128, 0, 1);
+            }
+        }
+        
+        #sair {
+            background: rgba(255, 0, 0, 0.5);
+            &:hover {
+                transition: all 1s linear;
+                letter-spacing: 3px;
+                background-color: rgba(255, 0, 0, 1);
+            }
+        }
+        
+        .containerGame {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            /* padding: 10px; */
+            width: 100%;
+            /* min-width: 320px; */
+            max-width: 500px;
+            height: 100%;
+            /* min-height: 420px; */
+            max-height: 600px;
+            overflow: hidden;
+
+            border: var(--bordas) solid rgba(0, 0, 0, 1);
+            background-color: #fff;
+            margin: 0;
+        }
+
+        /* .containerGame::before {
+            content: "";
+            position: absolute;
+            top:  0;
+            left: 0;
+            border: var(--bordas) solid #ac1e1e;
+        } */
+
+        .agua {
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(180deg, var(--transparent), var(--azul01), var(--azul02), var(--azul03), var(--azul04), var(--azul05), var(--azul06), var(--azul07), var(--azul08), var(--azul09), var(--azul10));
+            width: 100%;
+            height: 15%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .img {
+            position: absolute;
+            left: var(--posicaoHorizontal);
+            top: var(--posicaoVertical);
+            width: var(--imgTamanho);
+            animation: caindo var(--caidaDuracao) linear 1;
+            z-index: 15;
+        }
+
+        .containerPontos {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none; 
+            font-family: monospace;
+
+            padding: 5px;
+            background: rgba(133, 131, 131, 0.5);
+            border-bottom-right-radius: 10px;
+            z-index: 1000;
+            & span .pontos {
+                font-weight: bolder;
+            }
+        }
+
+        .pontos {
+            font-weight: bolder;
+            color: rgb(0, 0, 0);
+        }
+
+        ::selection {
+            background: transparent;
+        }

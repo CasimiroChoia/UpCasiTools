@@ -5,8 +5,7 @@
         var button1 = document.querySelectorAll("button")[0];
 
         document.querySelector('body').addEventListener("contextmenu",function(evt) {
-            // jarvis("ação bloqueada pelo site.")
-            jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+            jarvis("Menù Bloqueado.")
             evt.preventDefault()
         })
         

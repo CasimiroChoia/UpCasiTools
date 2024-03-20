@@ -14,9 +14,10 @@
   </header>
   <main>
     <button class="back-to-main" id="start">Iniciar Reconhecimento</button>
-    <p  id="output"></p>
-    <button class="back-to-main" id="stop">Parar Reconhecimento</button><br>
-    <button class="back-to-main" onclick="ler(document.querySelector('#output').innerHTML)">ler o que foi escrito</button><br>
+    <p id="output"></p>
+    <button class="back-to-main" id="copiar" onclick="copiarTexto()">copiar</button><br>
+    <!-- <button class="back-to-main" id="stop">Parar Reconhecimento</button><br> -->
+    <button class="back-to-main" onclick="ler(document.querySelector('#output').innerHTML)">ler</button><br>
     <a href="../index.html"><button class="back-to-main">voltar</button></a>
   </main>
   <footer>

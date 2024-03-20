@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>UpCasiTools || Sorteador Númerico</title>
+</head>
+<body>
+    <header>
+        <h1>sortador númerico</h1>
+    </header>
+    <main>
+        <p><label for="inicio">inicio:</label> <input type="number" placeholder="digite um numero" step="1" id="inicio"></p>
+        <p><label for="fim">fim:</label> <input type="number" placeholder="digite um numero" step="1" id="fim"></p>
+        <p><button type="button" id="gerar">gerar</button></p>
+        <blockquote>
+            <h3>número gerado</h3>
+            <p id="resp"></p>
+        </blockquote>
+        <a href="../index.html"><button>voltar</button></a>
+    </main>
+    <footer>
+        <p>obrigado pelo uso desta ferramenta da UpCasiTools.🤜🏼🤛🏼</p>
+    </footer>
+
+    <script defer>
+        btn = document.querySelector("#gerar")
+        inicio = document.querySelector("#inicio")
+        fim = document.querySelector("#fim")
+        resp = document.querySelector("#resp")
+
+        btn.addEventListener("click", () => {
+            if (inicio.value == "" || fim.value == "") {
+                return alert("preencha todos os campos")
+            }
+             i = Number(inicio.value);
+             f = Number(fim.value);
+
+            if (i > f) return alert("O primeiro campo não pode ser maior que o outro.")
+
+            resp.innerHTML = ` ${Math.floor(Math.random() * f ) + 1}`
+        })
+    </script>
+</body>
+</html>

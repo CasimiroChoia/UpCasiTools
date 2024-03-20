@@ -23,17 +23,11 @@
             // var data = `${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()} `
             //#endregion
             
+            document.querySelector('body').addEventListener("contextmenu",function(evt) {
+                jarvis("Menù Bloqueado.")
+                evt.preventDefault()
+            })
             
-            
-            /*setInterval(() => {
-                horas = new Date().getHours(), minutos = new Date().getMinutes(), segundos = new Date().getSeconds()  // obter as  horas, minutos e segundos
-                if (horas.toString().length < 2) horas = "0" + horas
-                if (minutos.toString().length < 2) minutos = "0" + minutos
-                if (segundos.toString().length < 2) segundos = "0" + segundos
-                historico = `=========================\n========HISTORICO==========\n===== ${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}-${horas}:${minutos} =======\n=========================\n`
-                // historico = `=========================\n========HISTORICO==========\n===== ${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}-${new Date().getHours()}:${new Date().getMinutes()} =======\n=========================\n`
-                
-            }, 1000*60);*/
 		historico = `=========================\n========HISTORICO==========\n===== ${timer()} =======\n=========================\n`
 
 	    function timer() {
@@ -282,3 +276,12 @@
             
             document.querySelector("#play1").addEventListener("click", game);
             document.querySelector("#play2").addEventListener("click", game);
+
+            limite.addEventListener("change",() => {
+                if(this.value != "opcinal") {
+                    valorDoLimite = parseInt(this.value)
+                    for (var meter of document.querySelectorAll("div.progresso label meter")) {
+                        meter.setAttribute("high", valorDoLimite.toString())
+                    }
+                }
+            })

@@ -1,10 +1,7 @@
-// alert("Seja Bemvindo à minha Pagina Web")
-
 var nome_do_cliente = prompt("Como te Chamas?")
 
 document.querySelector('body').addEventListener("contextmenu",function(evt) {
-	// jarvis("ação bloqueada pelo site.")
-	jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
+	jarvis("Menù Bloqueado.")
 	evt.preventDefault()
 })
 
@@ -15,11 +12,9 @@ function jarvis(voz) {
 }
 
 		
-	//	alert("clica 1 vez para tocar a Musica e 2 para pausar")
 		var automatic = setInterval(function aaa() {
 			var smsHora = window.document.querySelector("p.smsHora")
 			var hora = new Date().getUTCHours()
-			/*    	hora = 15*/
 			var minutos = new Date().getMinutes()
 			var segundos = new Date().getSeconds()
 
