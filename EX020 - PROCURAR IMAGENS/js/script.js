@@ -27,7 +27,7 @@ btnMore.addEventListener("click", () => {
 
 var palavraChave = "";
 var page = 1;
-var accesKey = "";
+var accesKey = "UD09GERKYlePE1G_WcPg9ok3IFS0Gfj8iU-Ejhav1Bc";
 
 async function Pesquisar() {
     if (navigator.onLine) {
