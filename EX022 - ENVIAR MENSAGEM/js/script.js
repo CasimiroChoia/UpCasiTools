@@ -24,9 +24,9 @@
             //#region  COMEÇO DOS PARAMETROS
                 URL = "https://api.mailersend.com/v1/sms";
                 let header = {
-                    // "Content-Type": "text/plain; charset=utf-8",
-                    // "X-SMS-Message-Id": "5e42957d51f1d94a1070a733"
-                    "Content-Type" : "aplication/json"
+                    "Content-Type": "text/plain; charset=utf-8",
+                    "X-SMS-Message-Id": "5e42957d51f1d94a1070a733"
+                    // "Content-Type" : "aplication/json"
                 }
                 let body = {
                     "from": numeroDoEmissor,
