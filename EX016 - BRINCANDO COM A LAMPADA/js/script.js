@@ -1,21 +1,3 @@
-
-        //  ALEATORIZANDO BACKGROUND-COLOR
-    // r = Math.floor(Math.random()*255)
-    // g = Math.floor(Math.random()*255)
-    // b = Math.floor(Math.random()*255)
-    // a = (Math.random()*1).toFixed(2)
-    // document.body.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`
-
-    document.body.addEventListener("contextmenu",function(evt) {        // BLOQUEANDO CLICK DIREITO
-        jarvis("o site cancelou a execução do click direito para te empedir de ver o código.")
-        evt.preventDefault()
-    });
-
-    document.querySelector('body').addEventListener("contextmenu",function(evt) {
-        jarvis("Menù Bloqueado.")
-        evt.preventDefault()
-    })
-
     function jarvis(voz) { // FUNÇÃO DE FALA
         window.speechSynthesis.cancel();
         objInteracao = new SpeechSynthesisUtterance(voz);

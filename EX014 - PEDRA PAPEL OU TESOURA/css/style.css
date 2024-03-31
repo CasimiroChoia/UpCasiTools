@@ -169,3 +169,18 @@
                 inset: 5px;
                 background: #222;
             } */
+
+            .progresso {
+                width: 100%;
+                display: flex;
+                flex-flow: row;
+            }
+
+            .progresso > * {
+                width: 50%;
+                padding: 5px;
+            }
+
+            .progresso > * > * {
+                width: 100%;
+            }

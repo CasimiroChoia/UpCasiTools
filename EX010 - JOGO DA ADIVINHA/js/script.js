@@ -5,11 +5,6 @@
             let entrada =           document.querySelector("#entrada")
             let sticker =           document.getElementById("sticker")
             // Math.floor(Math.random()) 
-
-            document.querySelector('body').addEventListener("contextmenu",function(evt) {
-                jarvis("Menù Bloqueado.")
-                evt.preventDefault()
-            })
             
             function jarvis(voz) {
                 window.speechSynthesis.cancel();

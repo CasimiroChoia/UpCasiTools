@@ -13,11 +13,6 @@
             audio.setAttribute("repeat","True");
 
             document.getElementById("logo").onclick = () => audio.play();
-
-            document.querySelector('body').addEventListener("contextmenu",function(evt) {
-                jarvis("Menù Bloqueado.")
-                evt.preventDefault()
-            })
             
             function jarvis(voz) {
                 window.speechSynthesis.cancel();
@@ -146,7 +141,6 @@
                 frase = Math.floor(Math.random()*limite)
                 document.getElementById("texto").innerHTML = `a cigana diz que:<br>\"${frases[frase]}\"`
                 falar( "a cigana diz que:" + frases[frase])
-                //document.getElementById("texto").value = `a cigana diz que:<br>\"${frases[frase]}\"`
                 copiar.style.display = "block"
         }
         
@@ -159,8 +153,6 @@
                 carta.setAttribute("draggable","false")
             }
         }
-
-       // var texto = document.querySelector("#texto")
 
        
        document.querySelector("#copiar").onclick = function() {
@@ -177,16 +169,5 @@
         window.speechSynthesis.cancel()
         palavras = new SpeechSynthesisUtterance(voz);
         fala = window.speechSynthesis;
-        // if (window.speechSynthesis.speaking === True) window.speechSynthesis.cancel(new SpeechSynthesisUtterance(voz))
         fala.speak(palavras);
     }
-       //document.querySelector("#copiar").addEventListener("click", copiarTexto())
-
-/*function copiarTexto() {
-	texto = document.querySelector("p#texto")
-
-	 texto.select();
-         texto.setSelectionRange(0, 99999);
-       	 document.execCommand("copy");
-	 alert("Texto Copiado");
-}*/

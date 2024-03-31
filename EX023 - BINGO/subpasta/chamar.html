@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chamar</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/chamar.css">
+    <script defer src="../js/chamar.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="titulo">buscando por números</h1>
+            <span class="voz"><label for="voz"> ativar voz: <input type="checkbox" name="voz" id="voz"></label></span>
+        </header>
+        <section>
+            <h2>definindo um limite</h2>
+            <select name="selectLimite" id="selectLimite">
+                <option value="0" selected disabled>clique aqui!</option>
+                <optgroup label="jogo rápido">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </optgroup>
+                <optgroup label="jogo longo">
+                    <option value="50">50</option>
+                    <option value="75">75</option>
+                    <option value="100">100</option>
+                </optgroup>
+            </select>
+        </section>
+        <main id="main">
+            <button type="button" id="btnChamar">chamar</button>
+            <div class="numero">
+                
+            </div>
+        </main>
+        <footer>
+	    <button type="button" onclick="saida.innerText = historico">ver historico</button>
+            <a href="../index.html"><button type="button">voltar</button></a>
+	    <output id="saida"></output>
+        </footer>
+    </div>
+</body>
+</html>

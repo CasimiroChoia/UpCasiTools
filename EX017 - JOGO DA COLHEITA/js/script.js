@@ -76,13 +76,13 @@
             cumida.classList.add("img")
             containerGame.insertAdjacentElement("afterbegin",cumida)
             cumida.setAttribute("src",`img/${aleatorio}.png`)
-            cumida.setAttribute("ontransitionend",`alert("")`)
-            cumida.setAttribute("draggable","false")
+            cumida.setAttribute("onend","alert('anomacl')")
             cumida.style.setProperty("--posicaoHorizontal",`${posicaoHorizontal}px`)            
             cumida.style.setProperty("--posicaoVertical",`${posicaoVertical}px`)            
             cumida.style.setProperty("--limite",`${limite}px`)    
             cumida.style.setProperty("--caidaDuracao",`${caidaDuracao}s`)      
             cumida.setAttribute("onclick","removerEPontuar(this)")  
+            cumida.setAttribute("draggable","false")
         }
 
         function perdeu(objecto) {
@@ -115,8 +115,3 @@
             if (caidaDuracao > 2.5 ) caidaDuracao -= 0.06;
             pontos.innerHTML = `${valorInicial}`;
         }
-
-        document.querySelector('body').addEventListener("contextmenu",function(evt) {
-            jarvis("Menù Bloqueado.")
-            evt.preventDefault()
-        })

@@ -3,11 +3,6 @@
         var resultado = document.querySelector("p.resu")
         var button1 = document.querySelectorAll("button")[0]
         
-        document.querySelector('body').addEventListener("contextmenu",function(evt) {
-            jarvis("Menù Bloqueado.")
-            evt.preventDefault()
-        })
-        
         function jarvis(voz) {
             window.speechSynthesis.cancel();
             objInteracao = new SpeechSynthesisUtterance(voz);

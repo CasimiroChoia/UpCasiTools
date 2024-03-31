@@ -1,0 +1,140 @@
+
+
+        :root {
+            --white: #fff;
+        }
+
+        * {
+            text-transform: capitalize;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            text-shadow: -2px 2px 0px #ffffff;
+            letter-spacing: 3px;
+            white-space: break-spaces;
+        }
+
+        input {
+            margin-left: 3px;
+        }
+
+        textarea {
+            padding: 10px;
+            position: relative;
+            vertical-align: middle;
+        }
+        
+        div.efeitoTextarea{
+            position: relative;
+            width: fit-content;
+            margin: 5px auto;
+            padding: 0;
+            /* border: 1px solid #000; */
+        }
+
+        div.efeitoTextarea::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -25px;
+            z-index: -1;
+            border-width: 15px;
+            border-style: solid;
+            border-color: var(--white) transparent transparent var(--white);
+        }
+        
+        input,
+        textarea {
+            text-transform: none;
+            background-color: var(--white);
+            outline: 0;
+            border: 0;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+
+            &:focus,
+            &:hover {
+                transition: all 1s;
+                box-shadow: 0 0 5px;
+            }
+        }
+
+        input::selection,
+        textarea::selection {
+            background: black;
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* ::selection {
+            background-color: transparent;
+        } */
+
+        ::-webkit-scrollbar {
+            background-color: darkgray;
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: dimgray;
+        }
+
+        ::placeholder {
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        body {
+            background-color: rgb(142 205 255);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .containerPrincipal {
+            max-width: 600px;
+            margin: auto;
+            overflow-x: hidden;
+            
+            & form fieldset {
+                border-radius: 10px;
+            }
+
+            & fieldset:hover {
+                transition: all 1s;
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+            & fieldset:hover legend {
+                transition: all 1s;
+                letter-spacing: 3px;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+        }
+
+        .labelReceptor {
+            margin: 5px auto;
+            display: block;
+
+            & input {
+                outline: 0;
+                border: 0;
+            }
+
+            & input:focus,
+            & input:hover {
+                box-shadow: 0 0 5px #000;
+            }
+        }
+
+        button {
+            padding: 3px 10px;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }

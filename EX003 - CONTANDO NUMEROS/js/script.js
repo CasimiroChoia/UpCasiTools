@@ -3,11 +3,6 @@
         var passo = document.getElementById("passo");
         var resultado = document.querySelector(".cont");
         var button1 = document.querySelectorAll("button")[0];
-
-        document.querySelector('body').addEventListener("contextmenu",function(evt) {
-            jarvis("Menù Bloqueado.")
-            evt.preventDefault()
-        })
         
         function jarvis(voz) {
             window.speechSynthesis.cancel();

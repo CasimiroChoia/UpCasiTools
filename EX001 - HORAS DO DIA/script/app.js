@@ -1,10 +1,5 @@
 var nome_do_cliente = prompt("Como te Chamas?")
 
-document.querySelector('body').addEventListener("contextmenu",function(evt) {
-	jarvis("Menù Bloqueado.")
-	evt.preventDefault()
-})
-
 function jarvis(voz) {
 	window.speechSynthesis.cancel();
 	objInteracao = new SpeechSynthesisUtterance(voz);
@@ -50,7 +45,7 @@ function jarvis(voz) {
 
 		if (new Date().getMonth() === 11) document.getElementById("natal").style = "display: block;"
 
-		if (new Date().getMonth() === 11 && new Date().getDate() === 24 || new Date().getDate() === 25 || new Date().getDate() === 26 || new Date().getDate() === 27) { //		QUANDO FOR DEZEMBRO VAI EXIBIR UMA MENSAGEM DE FELIZ NATAL
+		if (new Date().getMonth() === 11 && new Date().getDate() === 24 ||new Date().getMonth() === 11 && new Date().getDate() === 25 ||new Date().getMonth() === 11 && new Date().getDate() === 26 ||new Date().getMonth() === 11 && new Date().getDate() === 27) { //		QUANDO FOR DEZEMBRO VAI EXIBIR UMA MENSAGEM DE FELIZ NATAL
 			document.querySelector("#ocasiao").innerHTML =`<p style='text-transform: uppercase; font-weight: bolder;'>feliz natal, Senhor ${nome_do_cliente}.</p>`
 		}
 
@@ -61,17 +56,10 @@ function jarvis(voz) {
     },1000)	
 
 	var cc = 0
-	var audio = document.createElement("audio")
-	audio.src = "audio/2.mp3"
-
+	
 	function contar(tag){
 		if (tag=="img") {
 			document.querySelector("div.cliques").innerHTML = `Você clicou na img <b>${++cc}</b> vezes.`
-			audio.play()
-		}
-
-		if (tag=="h1") {
-			audio.pause()
 		}
 	}
 

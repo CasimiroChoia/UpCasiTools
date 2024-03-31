@@ -11,11 +11,6 @@
             let romance = document.querySelector(".romance");
             let comedia = document.querySelector(".comedia");
             let accao = document.querySelector(".accao");
-
-            document.querySelector('body').addEventListener("contextmenu",function(evt) {
-                jarvis("Menù Bloqueado.")
-                evt.preventDefault()
-            })
             
             function jarvis(voz = "audio do site indisponivel.") {
                 window.speechSynthesis.cancel();

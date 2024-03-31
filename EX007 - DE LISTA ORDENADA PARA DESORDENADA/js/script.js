@@ -5,12 +5,7 @@
         var desordernarList = document.querySelectorAll("button")[2]
         var showList = document.querySelector("#showList")
         var outName = document.getElementById("outName")
-        var aleatorio = 0
-
-        document.querySelector('body').addEventListener("contextmenu",function(evt) {
-            jarvis("Menù Bloqueado.")
-            evt.preventDefault()
-        })
+        var aleatorio = 0;
         
         function jarvis(voz) {
             window.speechSynthesis.cancel();

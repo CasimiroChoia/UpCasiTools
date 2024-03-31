@@ -106,8 +106,3 @@
     }
     
   }
-  
-    document.querySelector('body').addEventListener("contextmenu",function(evt) {
-      jarvis("Menù Bloqueado.")
-      evt.preventDefault()
-    })

@@ -26,11 +26,10 @@
             }
 
             :root {
-
+                /* --back */
                 --timing: 1s;
                 --timing-1: .9s;
                 --timing-5: .5s;
-
             }
 
             ::-webkit-scrollbar {
@@ -51,6 +50,7 @@
                 text-align: center;
                 font-family: monospace;
                 /* border: 1px solid #000; */
+                transition: all .5s;
                 cursor: default;
                 overflow-x: hidden;
                 overflow-x: visible;
@@ -69,13 +69,8 @@
                 place-items: center;
                 place-content: center;
                 background: rgb(153, 153, 153);
-
                 color: #000;
-                
-                /* height: 100vh; */
                 width: 100vw;
-                /* padding: 5px 5px 0; */
-
                 overflow-y: visible;
                 overflow-x: hidden;
             }
@@ -251,4 +246,33 @@
 
                         }
 
+            }
+
+
+            body.darkMode {
+                background-color: rgba(22, 22, 22, 1);
+                color: #fff;
+                transition: all 1s;
+            }
+
+            body.darkMode main {
+                background-color: rgba(55, 55, 55, 1);
+                /* transition: all 1s; */
+            }
+
+            body.darkMode main .ferramentas {
+                background: rgba(55, 55, 55, 1);
+                border: 1px solid #fff;
+                color: #fff;
+            }
+
+            body.darkMode main .ferramentas:hover {
+                background: rgba(150, 150, 150, 1);
+                /* transition: all 1s; */
+            }
+
+            #fundoModo {
+                padding: 4px 8px;
+                border: 3px solid #000;
+                font-weight: 900;
             }

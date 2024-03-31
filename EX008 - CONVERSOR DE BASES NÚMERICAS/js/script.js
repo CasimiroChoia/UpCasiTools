@@ -10,11 +10,6 @@ let hexadecimal = document.getElementById("hexadecimal")
            aaa.pop()
            return aaa.join("")
         }
-
-        document.querySelector('body').addEventListener("contextmenu",function(evt) {
-            jarvis("Menù Bloqueado.")
-            evt.preventDefault()
-        })
         
         function jarvis(voz) {
             window.speechSynthesis.cancel();

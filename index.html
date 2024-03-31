@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt" data-be-installed="true">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,22 @@
     <meta name="description" content=" «UpCasiTools Este é um site com diversas ferramentas e jogos ao seu dispor. Maked By Casimiro Choia">
     <meta name="author" content="Casimiro Choia">
     <meta name="generator" content="Jekyll v3.8.5">
-    <meta property="og:title" content="UpCasiTools">
+    <meta property="og:title" content="UpCasi">
     <meta property="og:locale" content="pt-PT">
     <meta property="og:description" content="UpCasiTools Este é um site com diversas ferramentas e jogos ao seu dispor. Maked By Casimiro Choia">
-    <link rel="canonical" href="https://casimirochoia.github.io/upcasitools">
+    <link rel="canonical" href="https://casimirochoia.github.io/upcasi">
     <meta property="og:url" content="https://casimirochoia.github.io/upcasitools">
     <meta property="og:site_name" content="casimirochoia.github.io/upcasitools">
     <title>UpCasiTools</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
-<body onload="verificarNavegador()">
+<body onload="verificarNavegador()" class="">
     <header>
         <h1>bemvindo à UpCasiTools.🖐🏽🧐🖐🏽</h1>
     </header>
     <main>
-        <h2><img id="logo" onclick="tocar()" title="Clica em Mim" ondblclick="pausar()" src="img/favicon3.ico" width="64" draggable="false"><br>escolhe uma ferramenta para usares.</h2>
+        <h2><img id="logo" onclick="tocar()" title="Clica em Mim" ondblclick="pausar()" src="img/favicon3.ico" width="64" draggable="false"><br>clica no icon <br>escolhe uma ferramenta para usares.</h2>
         <div class="container-ferramentas">
             <!-- HORAS DO DIA -->
             <a href="EX001 - HORAS DO DIA/index.html" draggable="false">
@@ -182,9 +182,25 @@
                     <p>girar a garrafa</p>
                 </div>
             </a> 
-            
-            
+            <!-- ENVIAR MENSAGEM COM API SENDMAIL -->
+            <a href="EX022 - ENVIAR MENSAGEM/index.html" target="_self" draggable="false">
+                <div class="ferramentas">
+                    <!-- <img src="EX022 - ENVIAR MENSAGEM/favicon.ico" draggable="false" alt="Imagem Do Exercicio"> -->
+                    <img src="img-teste.png" draggable="false" alt="Imagem Do Exercicio">
+                    <p>enviar mensagem</p>
+                </div>
+            </a> 
+            <!-- BINGO -->
+            <a href="EX023 - BINGO/index.html" target="_self" draggable="false">
+                <div class="ferramentas">
+                    <!-- <img src="EX022 - ENVIAR MENSAGEM/favicon.ico" draggable="false" alt="Imagem Do Exercicio"> -->
+                    <img src="img-teste.png" draggable="false" alt="Imagem Do Exercicio">
+                    <p>bingo</p>
+                </div>
+            </a> 
         </div>
+        <button id="fundoModo">fundo</button>
+        
     </main>
     <footer>
         <p>você encontra suas ferramentas de confiança Sempre na <b>UpCasiTools.</b><br>Maked by - casimiro choia</p>

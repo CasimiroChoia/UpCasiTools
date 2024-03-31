@@ -22,11 +22,6 @@
                 celcios.value = Number((kelvin.value) - 273.15).toFixed(2);
                 farinheit.value = -459.67 + Number(kelvin.value)*1.8;
             })
-
-            document.querySelector('body').addEventListener("contextmenu",function(evt) {
-                jarvis("Menù Bloqueado.")
-                evt.preventDefault()
-            })
             
             function jarvis(voz) {
                 window.speechSynthesis.cancel();

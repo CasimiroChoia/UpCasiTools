@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt" data-be-instaled="true">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpCasiTools || ENVIAR MENSAGEM</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="containerPrincipal">
+        <header>
+            <h1>enviar mensagem</h1>
+        </header>
+        <form>
+            <fieldset>
+                <legend>enviar sms</legend>
+                <p>
+                    <label for="numeroDoEmissor">Nº do Emissor</label><input required type="tel" name="numeroDoEmissor" id="numeroDoEmissor" placeholder="digite um numero" title="Digite Seu Numero"     autofocus autocomplete="tel">
+                </p>
+                <p>
+                    <label for="quantidade">quantidade de receptores</label>
+                    <select name="quantidade" id="quantidade" style="min-width: 8px;" required>
+                        <option value="nenhum" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </p>
+                <div class="receptores">
+
+                </div>
+                <div class="efeitoTextarea">
+                    <textarea name="mensagem" id="sms" placeholder="digite aqui a mensagem que deseja enviar" title="Escreva Sua Mensagem" cols="30" rows="10" required></textarea>
+                </div>
+                    <br>
+                <!-- <button type="button" class="btnSend">enviar</button><br> -->
+                <button type="submit" class="btnSend">enviar</button><br>
+                <a href="../index.html"><button type="button">voltar</button></a>
+            </fieldset>
+        </form>
+        <footer>
+            <p>obrigado pelo uso desta ferramenta da UpCasiTools.🤜🏼🤛🏼</p>
+        </footer>
+    </div>
+</body>
+</html>

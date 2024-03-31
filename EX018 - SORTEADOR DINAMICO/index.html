@@ -26,21 +26,31 @@
 
     <script defer>
         btn = document.querySelector("#gerar")
-        inicio = document.querySelector("#inicio")
-        fim = document.querySelector("#fim")
+        inpInicio = document.querySelector("#inicio")
+        inpFim = document.querySelector("#fim")
         resp = document.querySelector("#resp")
 
         btn.addEventListener("click", () => {
-            if (inicio.value == "" || fim.value == "") {
+            if (inpInicio.value == "" || inpFim.value == "") {
                 return alert("preencha todos os campos")
             }
-             i = Number(inicio.value);
-             f = Number(fim.value);
-
+             i = Number(inpInicio.value);
+             f = Number(inpFim.value);
             if (i > f) return alert("O primeiro campo não pode ser maior que o outro.")
 
-            resp.innerHTML = ` ${Math.floor(Math.random() * f ) + 1}`
+            numero = gerarNumero(i, f)
+            resp.innerHTML = `${numero}`
+            if (resp.innerHTML === `Undefined`) {
+                numero = gerarNumero(i, f)
+                resp.innerHTML = `${numero}`
+            }
         })
-    </script>
+        function gerarNumero(inicio = 0, fim = 0) {
+                fnumero = Math.floor(Math.random() * fim ) + inicio
+                
+                if (fnumero < i || fnumero > f || fnumero == undefined || isNaN(fnumero) ) {gerarNumero(inicio, fim)} else { return fnumero }
+        }
+
+        </script>
 </body>
 </html>

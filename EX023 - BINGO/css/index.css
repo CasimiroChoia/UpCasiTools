@@ -1,0 +1,58 @@
+
+
+        * {
+            text-align: center;
+            text-transform: capitalize;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body,
+        html {
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar{
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+	::selection {
+	    backgroung: transparent;
+	}
+
+        body {
+            min-height: 100vh;
+            background: rgb(133, 250, 104);
+        }
+
+        div.container {
+            margin: 0 auto;
+            padding: 10px;
+            max-width: 500px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            display: block;
+            margin: 8px auto;
+            padding: 2px 5px;
+            cursor: pointer;
+            width: 8ch;
+            border: 0.1px solid #000;
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: 600;
+            transition: all 1s;
+
+            &:hover {
+                background-color:rgba(0, 0, 0, 0.3);
+            }
+
+        }
