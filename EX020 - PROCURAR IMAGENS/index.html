@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UpCasiTools || Procurar Imagens</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
+    <script defer src="js/pixabay.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -14,11 +14,12 @@
     </header>
     <main class="containerPrincipal">
         <form class="formPesquisar">
-            <input type="search" id="inputPesquisar" placeholder="Pesquise aqui..." title="Escreva a Imagem que Deseja Pesquisar." required><button type="button" id="btnPesquisar" style="cursor: not-allowed;" disabled >pesquisar</button>
+            <input type="search" id="inputPesquisar" placeholder="Pesquise aqui..." title="Escreva a Imagem que Deseja Pesquisar." required><button type="button" id="btnPesquisar" style="cursor: not-allowed;" >pesquisar</button>
         </form>
         <section class="resultados">
          
         </section>
+        <p id="encontrados"></p>
         <button type="button" style="display: none;" class="monstrar-mais" id="more">monstrar mais</button><br>
         <a href="../index.html"><button type="button" class="monstrar-mais">voltar</button></a>
     </main>

@@ -1,15 +1,13 @@
-var nome_do_cliente = prompt("Como te Chamas?")
-
-function jarvis(voz) {
-	window.speechSynthesis.cancel();
-	objInteracao = new SpeechSynthesisUtterance(voz);
-	window.speechSynthesis.speak(objInteracao);
-}
+		function jarvis(voz) {
+			window.speechSynthesis.cancel();
+			objInteracao = new SpeechSynthesisUtterance(voz);
+			window.speechSynthesis.speak(objInteracao);
+		}
 
 		
 		var automatic = setInterval(function aaa() {
 			var smsHora = window.document.querySelector("p.smsHora")
-			var hora = new Date().getUTCHours()
+			var hora = new Date().getHours()
 			var minutos = new Date().getMinutes()
 			var segundos = new Date().getSeconds()
 
@@ -19,9 +17,10 @@ function jarvis(voz) {
     	
 		nome_do_cliente.style = "text-tranform: capitalize;"
 
-		if (hora < 10) hora = "0" + hora
-		if (minutos < 10) minutos = "0" + minutos
-		if (segundos < 10) segundos = "0" + segundos
+		if (hora < 10) hora = "0" + hora;
+		if (minutos < 10) minutos = "0" + minutos;
+		if (segundos < 10) segundos = "0" + segundos;
+
     	if (hora>=0 && hora<12) {
     		smsHora.innerHTML = `Bom Dia <strong>Senhor(a) ${nome_do_cliente}</strong>, são <strong>${hora}:${minutos}:${segundos} horas</strong> da manhã.`
     		document.querySelector("img#img").src = "img/manha.png"

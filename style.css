@@ -36,11 +36,18 @@
                 background: rgba(0, 0, 0, 0.4);
                 width: 10px;
                 border-radius: 10px;
+                transition: .5s;
             }
             
             ::-webkit-scrollbar-thumb {
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: rgba(255, 255, 255, 0.1);
                 border-radius: 10px;
+                transition: .5s;
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+                transition: .5s;
             }
 
             * {
@@ -87,6 +94,10 @@
                 text-align: center;
                 font-size: 2em;
             }
+
+            button {
+                cursor: pointer;
+            }
             
             @media (max-width:450px) {
                 
@@ -116,7 +127,7 @@
                 margin: 15px;
             }
 
-            @media (max-width: 400px) {  /* MEDIA MAX-WIDTH:400*/
+            @media (max-width: 400px) {  /* MEDIA MAX-WIDTH:400 ==================================================*/
                 body,html {
                     padding: 0;
                     margin: 0;
@@ -179,13 +190,12 @@
             
             .redes-sociais img {
                 width: 64px;
-                /* margin: 5px 10px; */
+                margin: 5px 10px;
                 border-radius: 50%;
             }
 
             .redes-sociais  img:hover {
                 animation: img-rotate .5s ease-in-out 0s 1 normal;
-                    /* animation-fill-mode: forwards; */
             }
 
             @media (max-width: 700px) {
@@ -198,14 +208,7 @@
                     justify-content: space-around;
                 }
                 
-                /* .redes-sociais {
-                    width: 90%;
-                    margin: 10px auto;
-                    display: block;
-                } */
-                
                 .redes-sociais img {
-                    /* width: 64px; */
                     width: 64%;
                     width: 64px;
                     overflow: hidden;
@@ -224,19 +227,20 @@
 
             .ferramentas,
             .ferramentas *,
-            .redes-sociais  * {
+            .redes-sociais  *,
+            button,
+            #fundoModo * {
                 text-decoration: none;
                 cursor: pointer;
             }
 
             #logo {
-                animation: img-rotate 5s linear 0s infinite reverse;
                 cursor: pointer;
             }
 
             @media (min-width: 1000px){
                         div.ferramentas {
-                            filter:blur(2px);
+                            filter:blur(50px);
 
                         }
 
@@ -273,6 +277,9 @@
 
             #fundoModo {
                 padding: 4px 8px;
-                border: 3px solid #000;
                 font-weight: 900;
+                /* border: 3px solid #000; */
+                border-radius: 50%;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
             }
