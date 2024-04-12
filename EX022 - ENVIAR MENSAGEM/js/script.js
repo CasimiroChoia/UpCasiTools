@@ -9,7 +9,7 @@
         var listaDeReceptores;
         var personificationLista = [];
         
-        async function enviarSMS() { // FUNCAO PRINCIPAL
+        async function enviarSMS(e) { // FUNCAO PRINCIPAL
 
             if (selQuantidade.value === "nenhum") return alert("Qual é a quantidade de receptores???")
             
@@ -43,12 +43,14 @@
                     // body:       JSON.stringify(body)
                 })
                 console.log(response.status);
-	            window.alert("Enviado Com Sucesso")
+	        window.alert("Enviado Com Sucesso")
                 personificationLista = []
+
             } catch (e) {
                 console.log(e.name + " => " + e.message);
-	            window.alert("Enviado Sem Sucesso")
+	        window.alert("Enviado Sem Sucesso")
                 window.alert(/*e.name + */"Aconteceu um erro " + e.message);
+		return false
             }
             console.log(body);
             // alert(body.toString())
@@ -87,8 +89,6 @@
                 input.setAttribute("required",`true`)
                 label.appendChild(input)
                 divReceptores.appendChild(label)
-
-
             }     
         }
 
@@ -102,6 +102,15 @@
                 })
             }
             console.log(personificationLista);
+        }
+
+        async function colarTexto(e) {
+            try {
+                let response = await navigator.clipboard.readText();
+                e.innerText = response;
+            } catch (e) {
+                alert("Seu Navegador Nâo Suporta está operação.")
+            }
         }
 
         selQuantidade.addEventListener("change", qtddReceivers, false)

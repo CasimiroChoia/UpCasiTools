@@ -1,9 +1,10 @@
+
         var inicio = document.getElementById("inicio");
         var fim = document.getElementById("fim");
         var passo = document.getElementById("passo");
         var resultado = document.querySelector(".cont");
-        var button1 = document.querySelectorAll("button")[0];
-        
+        var btnContar = document.querySelectorAll("button")[0];
+
         function jarvis(voz) {
             window.speechSynthesis.cancel();
             objInteracao = new SpeechSynthesisUtterance(voz);
@@ -12,18 +13,18 @@
 
         document.querySelectorAll("main")[0].addEventListener("input",function(){
             if (inicio.value != 0 || fim.value != 0) {
-                button1.disabled = false;
+                btnContar.disabled = false;
             }
         })
         
-        button1.addEventListener("mousedown",function(){
+        btnContar.addEventListener("mousedown",function(){
            if (inicio.value == 0 && fim.value == 0) {
                 alert("[ERRO] Apenas um campo pode ter 0 como valor.👊🏾👊🏾");
-                button1.disabled = true;
+                btnContar.disabled = true;
             }
-        })
+        })  
 
-        button1.addEventListener("click", function(){
+        btnContar.addEventListener("click", function(){
             var i = Number(inicio.value);
             var f = Number(fim.value);
             var p = Number(passo.value);
@@ -43,10 +44,10 @@
 	            }
             } else {
                 // DE CIMA PARA BAIXO
-	resultado.innerText += `🏍${i} `;
+	            resultado.innerText += `🏍${i} `;
                 while (i>f){
                     i-=p;
-	resultado.innerText += `🏍${i} `;    
+	                resultado.innerText += `🏍${i} `;    
                 }
                 resultado.innerText += `🏁`;
             }
@@ -57,14 +58,21 @@
                 reboot.innerHTML = "<a href=# target=_blank><button>criar outra janela</button></a>";
                 reboot.style = "background:rgba(0,0,0,0); display:block; margin:auto; position:absolute; top:0px; left:0px; text-decoration: none;";
             }
+
+            let btnCopiar = document.createElement("button");
+            btnCopiar.innerHTML = "copiar"
+            btnCopiar.addEventListener("click", copiarTexto, false)
             
+            setTimeout(() => {
+                document.querySelector("p.cont").insertAdjacentElement("afterend",btnCopiar)
+            }, 0.5 * 1000);
         })
 
         var allIn = document.querySelectorAll("input");
         
         //  INPUT 0
 
-        if (window.innerWidth>850) {
+        if (window.innerWidth > 850) {
             allIn[0].addEventListener("mouseover", function(){
                 document.querySelectorAll(".before-input")[0].style = "color: rgba(0, 0, 0, 0.5);   transition:1s;";
             })
@@ -91,4 +99,16 @@
             document.querySelectorAll(".before-input")[0].remove()
             document.querySelectorAll(".before-input")[1].remove()
             document.querySelectorAll(".before-input")[0].remove()
+        }
+
+
+        function copiarTexto(e) {
+            try {
+                navigator.clipboard.writeText(document.querySelector("p.cont").innerHTML + "\n\nBy UpCasi.")
+                e.target.style.display = "none";
+                alert("Copiado Com Sucesso")
+                e.target.remove()
+            } catch (e) {
+                alert("Copiado Sem Sucesso")
+            }
         }

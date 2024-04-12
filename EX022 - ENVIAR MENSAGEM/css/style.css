@@ -91,7 +91,7 @@
         }
 
         body {
-            background-color: rgb(142 205 255);
+            background-color: rgb(142, 205, 255);
             min-height: 100vh;
             overflow-x: hidden;
         }
